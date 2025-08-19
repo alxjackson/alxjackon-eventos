@@ -1,4 +1,5 @@
-import { Music, Mail, Shield, Code } from "lucide-react";
+import { Music, Mail, Shield, Code, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -40,8 +41,8 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Términos y Condiciones</li>
-              <li>Política de Privacidad</li>
+              <li><Link to="/terms" className="hover:text-purple-400 transition-colors">Términos y Condiciones</Link></li>
+              <li><Link to="/privacy" className="hover:text-purple-400 transition-colors">Política de Privacidad</Link></li>
               <li>Política de Cancelación</li>
               <li>Preguntas Frecuentes</li>
             </ul>
@@ -70,10 +71,31 @@ export const Footer = () => {
             Prohibida la redistribución sin autorización.
           </div>
           
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Code className="w-4 h-4" />
-            Desarrollado por{" "}
-            <span className="text-accent font-medium">ComplicesConectaSw</span>
+          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Code className="w-4 h-4" />
+              Desarrollado por{" "}
+              <span className="text-accent font-medium">DjWacko</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://wa.me/5215617184109" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-green-400 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: 56-1718-4109
+              </a>
+              <a 
+                href="https://twitter.com/DjWackoCDMX" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+              >
+                🐦 @DjWackoCDMX
+              </a>
+            </div>
           </div>
         </div>
       </div>

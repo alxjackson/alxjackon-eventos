@@ -26,6 +26,7 @@ const pricingPlans = [
     description: "La opción más popular para bodas y XV años",
     features: [
       "2 artistas principales",
+      "DJ profesional incluido",
       "Repertorio de 30+ canciones",
       "Equipo de sonido profesional",
       "Vestuario y utilería completa",
@@ -43,6 +44,7 @@ const pricingPlans = [
     description: "Experiencia completa para eventos corporativos y grandes celebraciones",
     features: [
       "3+ artistas principales",
+      "DJ profesional premium",
       "Repertorio ilimitado",
       "Equipo de sonido y luces profesional",
       "Vestuario, utilería y efectos especiales",

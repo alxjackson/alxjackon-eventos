@@ -26,22 +26,6 @@ const artists = [
     specialties: ["Clásicos", "Moderno", "Versátil"],
     rating: 5,
     events: 120
-  },
-  {
-    name: "Carmelo",
-    description: "Espectáculos llenos de energía y carisma que conectan con todo tipo de audiencia",
-    image: "/placeholder.svg",
-    specialties: ["Variado", "Energético", "Familiar"],
-    rating: 4,
-    events: 80
-  },
-  {
-    name: "Paul",
-    description: "Interpretaciones emotivas y profesionales que crean momentos inolvidables",
-    image: "/placeholder.svg",
-    specialties: ["Baladas", "Rock", "Clásicos"],
-    rating: 5,
-    events: 95
   }
 ];
 

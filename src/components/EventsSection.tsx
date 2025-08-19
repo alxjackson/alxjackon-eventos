@@ -39,8 +39,7 @@ const mockEvents: Event[] = [
     status: 'active',
     image_url: '/2024-07-11-00-35-34-117.jpg',
     categories: [
-      { id: '1', name: 'Conciertos', color: '#8B5CF6' },
-      { id: '2', name: 'Tributos', color: '#EC4899' }
+      { id: '1', name: 'Disponible', color: '#10B981' }
     ]
   },
   {
@@ -54,7 +53,6 @@ const mockEvents: Event[] = [
     available_spots: 200,
     status: 'active',
     categories: [
-      { id: '1', name: 'Conciertos', color: '#8B5CF6' },
       { id: '5', name: 'VIP', color: '#EF4444' }
     ]
   },
@@ -190,17 +188,9 @@ export const EventsSection = () => {
             {events.map((event) => (
               <Card key={event.id} className="bg-white/10 backdrop-blur-lg border-white/20 shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:scale-105">
                 <div className="relative">
-                  {event.image_url ? (
-                    <img 
-                      src={event.image_url} 
-                      alt={event.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
-                  ) : (
-                    <div className="w-full h-48 bg-gradient-to-br from-purple-600 to-pink-600 rounded-t-lg flex items-center justify-center">
-                      <Star className="w-12 h-12 text-white" />
-                    </div>
-                  )}
+                  <div className="w-full h-48 bg-gradient-to-br from-purple-600 to-pink-600 rounded-t-lg flex items-center justify-center">
+                    <Star className="w-12 h-12 text-white" />
+                  </div>
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                     {event.categories?.map((category) => (
                       <Badge 

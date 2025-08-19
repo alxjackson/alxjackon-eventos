@@ -150,6 +150,14 @@ https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-re
 - **Compatibilidad**: Android 7.0+
 - **Descarga automática**: Solo en navegadores móviles
 
+## 👨‍💻 Desarrollador
+
+**Desarrollado por:** DjWacko  
+**Contacto Developer:**
+- 📱 WhatsApp: [56-1718-4109](https://wa.me/5215617184109)
+- 🐦 Twitter: [@DjWackoCDMX](https://twitter.com/DjWackoCDMX)
+
 ## 📄 Licencia
 
-Proyecto privado - AlxJackson Entertainment Platform © 2025
+Proyecto privado - AlxJackson Entertainment Platform © 2025  
+**Desarrollado por DjWacko** - Todos los derechos reservados.
