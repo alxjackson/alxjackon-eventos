@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AlxJackson Entertainment Platform Design System 
+   Inspired by premium entertainment and music platforms
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Entertainment Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary - Royal Purple (Freddy Mercury inspired) */
+    --primary: 270 91% 65%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Deep Purple */
+    --secondary: 260 40% 98%;
+    --secondary-foreground: 270 91% 65%;
+
+    /* Muted tones */
+    --muted: 260 40% 98%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Accent - Gold (luxury) */
+    --accent: 45 93% 58%;
+    --accent-foreground: 0 0% 9%;
+
+    /* Destructive - Red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 270 91% 65%;
+
+    --radius: 0.75rem;
+
+    /* Entertainment Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(270, 91%, 65%), hsl(300, 85%, 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(45, 93%, 58%), hsl(35, 91%, 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(240, 10%, 3.9%), hsl(260, 15%, 8%));
+    
+    /* Performance & Music Inspired */
+    --stage-lights: 50 100% 80%;
+    --spotlight: 45 93% 58%;
+    --performance: 270 91% 65%;
+    --luxury: 45 93% 58%;
+
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(270 91% 65% / 0.3);
+    --shadow-luxury: 0 10px 40px hsl(45 93% 58% / 0.2);
+    --shadow-performance: 0 20px 60px hsl(270 91% 65% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 91% 65%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 270 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
