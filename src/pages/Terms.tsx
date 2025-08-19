@@ -133,15 +133,22 @@ export const Terms = () => {
                 </p>
                 <ul className="list-none mt-4 space-y-2">
                   <li>📧 Email: info@alxjackson.com</li>
-                  <li>📱 WhatsApp: +52 55 1234 5678</li>
+                  <li>📱 WhatsApp: +52 729 235 5348</li>
                   <li>🌐 Web: alxjackson-eventos.vercel.app</li>
                 </ul>
               </section>
 
               <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-6 mt-8">
-                <p className="text-center text-purple-300 font-medium">
+                <p className="text-center text-purple-300 font-medium mb-4">
                   © 2025 AlxJackson Entertainment Platform. Todos los derechos reservados.
                 </p>
+                <p className="text-center text-white/70 text-sm">
+                  🎵 Desarrollado por <span className="text-purple-400 font-semibold">DjWacko</span> - Especialista en entretenimiento digital
+                </p>
+                <div className="flex justify-center gap-4 mt-3 text-sm">
+                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
+                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                </div>
               </div>
             </div>
           </div>

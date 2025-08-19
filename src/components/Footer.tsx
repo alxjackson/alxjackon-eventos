@@ -72,29 +72,31 @@ export const Footer = () => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Code className="w-4 h-4" />
-              Desarrollado por{" "}
-              <span className="text-accent font-medium">DjWacko</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <a 
-                href="https://wa.me/5215617184109" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-400 transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp: 56-1718-4109
-              </a>
-              <a 
-                href="https://twitter.com/DjWackoCDMX" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
-              >
-                🐦 @DjWackoCDMX
-              </a>
+            <div className="text-center">
+              <p className="text-white/80 mb-4">
+                <strong>Desarrollado por:</strong> <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-bold">DjWacko</span>
+              </p>
+              <p className="text-white/70 text-sm mb-4">
+                Especialista en desarrollo de plataformas de entretenimiento | DJ & Developer
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm">
+                <a 
+                  href="https://wa.me/5215617184109" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:text-green-300 transition-colors flex items-center justify-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm"
+                >
+                  Desarrollador e informes para contrataciones
+                </a>
+                <a 
+                  href="https://twitter.com/DjWackoCDMX" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors flex items-center justify-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm"
+                >
+                  Sígueme para proyectos y música
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirma tu cuenta - AlxJackson Entertainment</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .header {
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: #8B5CF6;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎵</div>
+            <h1 style="margin: 0; font-size: 28px;">AlxJackson Entertainment</h1>
+            <p style="margin: 10px 0 0; opacity: 0.9;">Plataforma de Eventos Premium</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="color: #8B5CF6; margin-bottom: 20px;">¡Bienvenido a la familia AlxJackson! 🎉</h2>
+            
+            <p style="font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
+                Gracias por registrarte en nuestra plataforma de entretenimiento premium. 
+                Para completar tu registro y acceder a todas nuestras funcionalidades, 
+                necesitas confirmar tu dirección de correo electrónico.
+            </p>
+            
+            <div class="divider"></div>
+            
+            <a href="{{ .ConfirmationURL }}" class="button">
+                ✨ Confirmar mi cuenta ✨
+            </a>
+            
+            <div class="divider"></div>
+            
+            <p style="font-size: 14px; color: rgba(255, 255, 255, 0.8); margin-top: 30px;">
+                Una vez confirmada tu cuenta podrás:
+            </p>
+            
+            <ul style="text-align: left; display: inline-block; margin: 20px 0;">
+                <li>🎭 Reservar eventos con nuestros artistas</li>
+                <li>📅 Acceder al calendario de disponibilidad</li>
+                <li>💎 Ver paquetes premium y VIP</li>
+                <li>📱 Recibir notificaciones importantes</li>
+                <li>🎵 Personalizar tu experiencia</li>
+            </ul>
+            
+            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.6); margin-top: 30px;">
+                Si no puedes hacer clic en el botón, copia y pega este enlace en tu navegador:<br>
+                <span style="word-break: break-all;">{{ .ConfirmationURL }}</span>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>AlxJackson Entertainment Platform</strong></p>
+            <p>Experiencias musicales inolvidables desde 2024</p>
+            
+            <div class="social-links">
+                <a href="https://wa.me/5215617184109">📱 WhatsApp</a>
+                <a href="https://twitter.com/DjWackoCDMX">🐦 Twitter</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p style="font-size: 12px;">
+                Desarrollado con ❤️ por <strong>DjWacko</strong><br>
+                Especialista en desarrollo de plataformas de entretenimiento
+            </p>
+            
+            <p style="font-size: 11px; margin-top: 20px;">
+                Este correo fue enviado a {{ .Email }}. Si no creaste una cuenta con nosotros, 
+                puedes ignorar este mensaje de forma segura.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

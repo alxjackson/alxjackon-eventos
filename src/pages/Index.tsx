@@ -9,6 +9,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ContactSection } from '@/components/ContactSection';
 import { FloatingActionButton } from '@/components/FloatingActionButton';
+import CalendarBooking from '@/components/CalendarBooking';
 import { Footer } from "@/components/Footer";
 import { LoadingScreen } from '@/components/LoadingScreen';
 import { Button } from '@/components/ui/button';
@@ -66,6 +67,7 @@ const Index = () => {
       <ServicesSection />
       <EventsSection />
       <PricingSection />
+      <CalendarBooking />
       <TestimonialsSection />
       <ContactSection />
       <FloatingActionButton />

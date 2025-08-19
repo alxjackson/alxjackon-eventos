@@ -21,8 +21,12 @@ export const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center shadow-glow">
-            <Music className="w-6 h-6 text-white" />
+          <div className="w-10 h-10 rounded-lg overflow-hidden shadow-glow">
+            <img 
+              src="/2024-07-11-00-35-34-117.jpg" 
+              alt="AlxJackson Logo" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <h1 className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">

@@ -1,6 +1,8 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Check, Star, Clock, Users, MapPin } from "lucide-react";
 
 const pricingPlans = [
@@ -95,9 +97,9 @@ export const PricingSection = () => {
             <Card key={index} className={`relative bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 ${plan.popular ? 'scale-105 border-purple-500/50' : ''}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1">
-                    Más Popular
-                  </Badge>
+                  <Button asChild className="w-full bg-gradient-hero hover:bg-gradient-hero/90 text-white">
+                    <Link to="/payments">Seleccionar Plan</Link>
+                  </Button>
                 </div>
               )}
               
@@ -125,10 +127,11 @@ export const PricingSection = () => {
                 </ul>
 
                 <Button 
+                  asChild
                   className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white font-semibold py-3`}
                   size="lg"
                 >
-                  Reservar Ahora
+                  <Link to="/payments">Reservar Ahora</Link>
                 </Button>
               </CardContent>
             </Card>

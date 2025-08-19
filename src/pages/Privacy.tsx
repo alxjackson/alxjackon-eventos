@@ -164,10 +164,17 @@ export const Privacy = () => {
                 </ul>
               </section>
 
-              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-6 mt-8">
-                <p className="text-center text-green-300 font-medium">
-                  Su privacidad es importante para nosotros. Nos comprometemos a proteger y respetar su información personal.
+              <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-6 mt-8">
+                <p className="text-center text-purple-300 font-medium mb-4">
+                  © 2025 AlxJackson Entertainment Platform. Todos los derechos reservados.
                 </p>
+                <p className="text-center text-white/70 text-sm">
+                  🎵 Desarrollado por <span className="text-purple-400 font-semibold">DjWacko</span> - Especialista en entretenimiento digital
+                </p>
+                <div className="flex justify-center gap-4 mt-3 text-sm">
+                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
+                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                </div>
               </div>
             </div>
           </div>
