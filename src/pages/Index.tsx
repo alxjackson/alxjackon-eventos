@@ -20,6 +20,7 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isNativeApp = Capacitor.isNativePlatform();
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const showAPKButton = !isNativeApp; // Show on all web browsers, not just mobile
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,9 +44,9 @@ const Index = () => {
       <Header />
       
       {/* Download APK Banner - Only show on web browsers, not in native app */}
-      {!isNativeApp && isMobile && (
+      {showAPKButton && (
         <div className="bg-gradient-to-r from-green-600 to-blue-600 py-3 px-4 text-center">
-          <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <div className="max-w-4xl mx-auto flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-3">
               <Smartphone className="w-5 h-5 text-white" />
               <span className="text-white font-medium">¡Descarga nuestra App Nativa!</span>
@@ -53,7 +54,7 @@ const Index = () => {
             <Button 
               onClick={handleDownloadAPK}
               size="sm"
-              className="bg-white text-green-600 hover:bg-gray-100 font-bold"
+              className="bg-white text-green-600 hover:bg-gray-100 font-bold transition-all duration-200 hover:scale-105"
             >
               <Download className="w-4 h-4 mr-2" />
               Descargar APK

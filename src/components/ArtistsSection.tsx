@@ -6,7 +6,7 @@ const artists = [
   {
     name: "Freddy Mercury",
     description: "El legendario vocalista de Queen cobra vida con interpretaciones épicas de sus mayores éxitos",
-    image: "/placeholder.svg",
+    image: "/2024-07-11-00-35-34-117.jpg",
     specialties: ["Rock", "Opera", "Baladas"],
     rating: 5,
     events: 150
@@ -14,7 +14,7 @@ const artists = [
   {
     name: "Michael Jackson",
     description: "El Rey del Pop con sus icónicos movimientos y canciones que marcaron generaciones",
-    image: "/placeholder.svg",
+    image: "/2024-07-11-00-35-34-117.jpg",
     specialties: ["Pop", "Dance", "Soul"],
     rating: 5,
     events: 200
@@ -22,7 +22,7 @@ const artists = [
   {
     name: "Alex Vitor",
     description: "Interpretaciones únicas de los grandes clásicos con un toque moderno y personal",
-    image: "/placeholder.svg",
+    image: "/2024-07-11-00-35-34-117.jpg",
     specialties: ["Clásicos", "Moderno", "Versátil"],
     rating: 5,
     events: 120
