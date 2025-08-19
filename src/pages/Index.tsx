@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { WelcomeModal } from "@/components/WelcomeModal";
+import { WelcomeModal } from '@/components/WelcomeModal';
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ArtistsSection } from "@/components/ArtistsSection";
-import { PricingSection } from "@/components/PricingSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { ContactSection } from "@/components/ContactSection";
+import { ArtistsSection } from '@/components/ArtistsSection';
+import { ServicesSection } from '@/components/ServicesSection';
+import { EventsSection } from '@/components/EventsSection';
+import { PricingSection } from '@/components/PricingSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { ContactSection } from '@/components/ContactSection';
+import { FloatingActionButton } from '@/components/FloatingActionButton';
 import { Footer } from "@/components/Footer";
-import { FloatingActionButton } from "@/components/FloatingActionButton";
-import { LoadingScreen } from "@/components/LoadingScreen";
+import { LoadingScreen } from '@/components/LoadingScreen';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,13 +32,14 @@ const Index = () => {
       <WelcomeModal />
       <Header />
       <HeroSection />
-      <ServicesSection />
       <ArtistsSection />
+      <ServicesSection />
+      <EventsSection />
       <PricingSection />
       <TestimonialsSection />
       <ContactSection />
-      <Footer />
       <FloatingActionButton />
+      <Footer />
     </div>
   );
 };

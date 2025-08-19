@@ -64,6 +64,17 @@ export const Header = () => {
                 <DropdownMenuItem>
                   Mis Reservas
                 </DropdownMenuItem>
+                {(user?.email === 'admin@alxjackson.com' || user?.email === 'alex@alxjackson.com') && (
+                  <>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild>
+                      <Link to="/admin" className="flex items-center">
+                        <User className="w-4 h-4 mr-2" />
+                        Dashboard Admin
+                      </Link>
+                    </DropdownMenuItem>
+                  </>
+                )}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleSignOut}>
                   <LogOut className="w-4 h-4 mr-2" />

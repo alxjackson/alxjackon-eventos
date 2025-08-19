@@ -1,72 +1,141 @@
-# Bienvenido al proyecto AlexJackson
+# 🎭 AlxJackson Eventos
 
-## Información del proyecto
+Plataforma de entretenimiento premium para eventos únicos con artistas de renombre internacional.
 
-**URL**: https://github.com/alxjackson/alxjackon-eventos
+## 🌟 Características Principales
 
-## ¿Cómo puedo editar este código?
+### 🔐 Sistema de Autenticación Avanzado ✅
+- Registro con confirmación de email personalizada
+- Recuperación de contraseña segura
+- Sesiones persistentes y seguras
+- Context de autenticación completo
 
-Hay varias formas de editar tu aplicación.
+### 👥 Sistema de Roles Multi-nivel ✅
+- **👑 Admin**: Control total del sistema, gestión de usuarios y eventos
+- **🎭 Organizer**: Creación y gestión de eventos, moderación
+- **💎 User**: Acceso a eventos, reservas y funciones básicas
+- Asignación automática de roles para nuevos usuarios
 
-**Usar la Plataforma AlexJackson**
+### 🎨 Interfaz Profesional ✅
+- Diseño moderno con glassmorphism y gradients
+- Animaciones CSS personalizadas
+- LoadingScreen con barra de progreso
+- Modal de bienvenida interactivo
+- Páginas de autenticación profesionales
 
-Esta es una plataforma de entretenimiento y reservaciones de eventos construida por AlexJackson.
+### 📱 Aplicación Móvil ✅
+- App Android con Capacitor configurada
+- Scripts npm para desarrollo móvil
+- SplashScreen personalizado
+- Documentación completa para Android
 
-Los cambios realizados se confirmarán en este repositorio.
+## 🚧 En Desarrollo Activo
 
-**Usar tu IDE preferido**
+### 📅 Gestión de Eventos y Reservas 🔄
+- Sistema de creación de eventos exclusivos
+- Gestión de capacidad y aforo limitado
+- Horarios flexibles y disponibilidad
+- Control de listas de espera
 
-Si quieres trabajar localmente usando tu propio IDE, puedes clonar este repositorio y hacer push de los cambios.
+### 📧 Sistema de Emails Personalizados 🔄
+- Templates con branding AlxJackson
+- Confirmaciones de registro y eventos
+- Notificaciones automáticas
+- SMTP personalizado
 
-El único requisito es tener Node.js y npm instalados - [instalar con nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📊 Dashboard Administrativo 🔄
+- Panel de control para administradores
+- Gestión de usuarios y roles
+- Estadísticas de eventos
+- Reportes y métricas
 
-Sigue estos pasos:
+## 💳 Roadmap Futuro
 
-```sh
-# Paso 1: Clona el repositorio usando la URL de Git del proyecto.
-git clone https://github.com/alxjackson/alxjackon-eventos.git
+### Sistema de Pagos Premium
+- Integración con Stripe/PayPal
+- Membresías VIP y eventos exclusivos
+- Anticipos y pagos completos
+- Historial de transacciones
+- **Nota**: Pendiente hasta obtener cuentas de pago verificadas
 
-# Paso 2: Navega al directorio del proyecto.
-cd alxjackon-eventos
+### 🔔 Notificaciones Push
+- Alertas de eventos próximos
+- Confirmaciones de reservas
+- Mensajería en tiempo real
 
-# Paso 3: Instala las dependencias necesarias.
-npm i
+## 🛠️ Stack Tecnológico
 
-# Paso 4: Inicia el servidor de desarrollo con auto-recarga y vista previa instantánea.
+### Frontend
+- **React 18** + **TypeScript** - UI moderna y tipado estático
+- **Tailwind CSS** - Estilos utility-first
+- **Vite** - Build tool optimizado
+- **Lucide React** - Iconografía moderna
+- **Radix UI** - Componentes accesibles
+
+### Backend & Base de Datos
+- **Supabase** - Backend as a Service completo
+- **PostgreSQL** - Base de datos relacional
+- **Row Level Security (RLS)** - Seguridad avanzada
+- **Triggers & Functions** - Lógica de negocio
+
+### Móvil & Deployment
+- **Capacitor** - Framework híbrido para móviles
+- **Android Studio** - Desarrollo nativo Android
+- **Vercel** - Hosting y deployment automático
+
+## 📱 Comandos de Desarrollo
+
+### Instalación
+```bash
+npm install
+```
+
+### Desarrollo local
+```bash
 npm run dev
 ```
 
-**Editar un archivo directamente en GitHub**
+### Build para producción
+```bash
+npm run build
+```
 
-- Navega a los archivos deseados.
-- Haz clic en el botón "Edit" (ícono de lápiz) en la parte superior derecha de la vista del archivo.
-- Realiza tus cambios y confirma los cambios.
+### Aplicación móvil Android
+```bash
+npm run cap:build
+npm run cap:run:android
+```
 
-**Usar GitHub Codespaces**
+### Sincronización Capacitor
+```bash
+npm run cap:sync
+```
 
-- Navega a la página principal de tu repositorio.
-- Haz clic en el botón "Code" (botón verde) cerca de la parte superior derecha.
-- Selecciona la pestaña "Codespaces".
-- Haz clic en "New codespace" para lanzar un nuevo entorno Codespace.
-- Edita archivos directamente dentro del Codespace y confirma y haz push de tus cambios una vez que hayas terminado.
+## 🔧 Configuración
 
-## ¿Qué tecnologías se usan en este proyecto?
+1. **Variables de entorno**: Configurar `.env` con credenciales de Supabase
+2. **Base de datos**: Ejecutar migraciones en Supabase
+3. **Android**: Seguir instrucciones detalladas en `ANDROID.md`
+4. **Email**: Configurar SMTP en Supabase (en desarrollo)
 
-Este proyecto está construido con:
+## 📊 Estado del Proyecto
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- Supabase (Base de datos)
+**Completado: ~65%**
+- ✅ Autenticación y roles implementados
+- ✅ Frontend profesional completado
+- ✅ Configuración móvil lista
+- 🔄 Sistema de eventos en desarrollo
+- 🔄 Dashboard admin en desarrollo
+- 📋 Sistema de pagos planificado
 
-## ¿Cómo puedo desplegar este proyecto?
+## 🎯 Próximos Hitos
 
-Despliega usando tu plataforma de hosting preferida (Vercel, Netlify, etc.).
+1. **Sistema de Eventos** - Creación y gestión completa
+2. **Reservas y Capacidad** - Booking system funcional
+3. **Dashboard Admin** - Panel de control completo
+4. **Templates de Email** - Branding personalizado
+5. **Sistema de Pagos** - Integración premium (futuro)
 
-## ¿Puedo conectar un dominio personalizado?
+## 📄 Licencia
 
-¡Sí, puedes!
-
-Para conectar un dominio, configúralo a través de la configuración de dominios de tu plataforma de hosting.
+Proyecto privado - AlxJackson Entertainment Platform © 2025
