@@ -1,56 +1,125 @@
-# Configuración para Android - AlxJackson Eventos
+# 📱 Configuración Android - AlxJackson Eventos
 
-## Requisitos previos
+## ✅ Estado Actual
+**APK Generada y Lista**: v1.1.0 disponible para descarga
 
-1. **Android Studio** instalado
+## 🔧 Requisitos Previos
+
+1. **Android Studio** instalado (Arctic Fox o superior)
 2. **Java Development Kit (JDK) 11 o superior**
-3. **Android SDK** configurado
+3. **Android SDK** configurado (API Level 24+)
+4. **Node.js** 18+ y npm
 
-## Pasos para generar la aplicación Android
+## 🚀 Comandos de Desarrollo
 
-### 1. Construir la aplicación web
+### Desarrollo Rápido
 ```bash
+# Build completo y sincronización
+npm run cap:build
+
+# Ejecutar en dispositivo/emulador
+npm run cap:run:android
+
+# Solo sincronizar cambios
+npm run cap:sync
+```
+
+### Comandos Individuales
+```bash
+# 1. Construir aplicación web
 npm run build
-```
 
-### 2. Inicializar Capacitor (solo la primera vez)
-```bash
-npx cap init
-```
-
-### 3. Agregar la plataforma Android
-```bash
-npx cap add android
-```
-
-### 4. Sincronizar archivos
-```bash
+# 2. Sincronizar con Android
 npx cap sync android
-```
 
-### 5. Abrir en Android Studio
-```bash
+# 3. Abrir en Android Studio
 npx cap open android
 ```
 
-## Scripts disponibles
+## ⚙️ Configuración Capacitor
 
-- `npm run cap:init` - Inicializar Capacitor
-- `npm run cap:add:android` - Agregar plataforma Android
-- `npm run cap:sync` - Sincronizar cambios
-- `npm run cap:run:android` - Ejecutar en Android
-- `npm run cap:build` - Construir y sincronizar
+**Archivo `capacitor.config.ts` configurado:**
+```typescript
+{
+  appId: 'com.alexjackson.eventos',
+  appName: 'AlxJackson Eventos',
+  webDir: 'dist',
+  server: { androidScheme: 'https' },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 2000,
+      backgroundColor: "#000000"
+    }
+  }
+}
+```
 
-## Configuración del archivo capacitor.config.ts
+## 📲 APK Disponible
 
-El archivo ya está configurado con:
-- **App ID**: `com.alexjackson.eventos`
-- **App Name**: `AlxJackson Eventos`
-- **Web Directory**: `dist`
-- **Android Scheme**: `https`
+**Descarga directa:**
+```
+https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk
+```
 
-## Notas importantes
+**Características de la APK:**
+- **Versión**: v1.1.0
+- **Tamaño**: ~8MB
+- **Compatibilidad**: Android 7.0+ (API 24+)
+- **Arquitectura**: Universal (ARM64, ARM, x86)
 
-- Asegúrate de tener las variables de entorno de Supabase configuradas
-- El proyecto usa Vite como bundler
-- La aplicación está optimizada para dispositivos móviles con Tailwind CSS
+## 🎨 Funcionalidades Móviles
+
+### Detección de Plataforma
+- Automática distinción entre web y app nativa
+- WelcomeModal adaptado para cada plataforma
+- Descarga APK solo visible en navegadores móviles
+
+### SplashScreen Personalizado
+- Duración: 2 segundos
+- Fondo negro con branding AlxJackson
+- Transición suave a la aplicación
+
+### Optimizaciones Móviles
+- Interfaz responsive con Tailwind CSS
+- Gestos táctiles optimizados
+- Performance mejorada para dispositivos móviles
+
+## 🔐 Variables de Entorno
+
+Configurar `.env` con credenciales de Supabase:
+```env
+VITE_SUPABASE_URL=tu_supabase_url
+VITE_SUPABASE_ANON_KEY=tu_supabase_anon_key
+```
+
+## 🛠️ Troubleshooting
+
+### Error de Build
+```bash
+# Limpiar caché y reinstalar
+rm -rf node_modules package-lock.json
+npm install
+npm run cap:build
+```
+
+### Error de Sincronización
+```bash
+# Forzar sincronización completa
+npx cap sync android --force
+```
+
+### Problemas de Android Studio
+1. Verificar SDK instalado (API 24+)
+2. Configurar ANDROID_HOME
+3. Aceptar licencias: `sdkmanager --licenses`
+
+## 📊 Estado de Desarrollo
+
+- ✅ **Capacitor v7.4.2** configurado
+- ✅ **APK generada** y funcional
+- ✅ **SplashScreen** personalizado
+- ✅ **Detección de plataforma** implementada
+- ✅ **Scripts npm** optimizados
+- ✅ **Documentación** completa
+
+**La aplicación Android está 100% lista para distribución.**

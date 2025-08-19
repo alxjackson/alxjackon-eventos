@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Music, Sparkles, Calendar } from "lucide-react";
+import { AlertTriangle, Music, Sparkles, Calendar, Download, Smartphone } from "lucide-react";
+import { Capacitor } from "@capacitor/core";
 
 export const WelcomeModal = () => {
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const isNativeApp = Capacitor.isNativePlatform();
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
   useEffect(() => {
     // Show modal on first visit
@@ -15,13 +19,21 @@ export const WelcomeModal = () => {
   }, []);
 
   const handleClose = () => {
-    localStorage.setItem("alxjackson-welcome-seen", "true");
-    setOpen(false);
+    setIsLoading(true);
+    setTimeout(() => {
+      localStorage.setItem("alxjackson-welcome-seen", "true");
+      setOpen(false);
+      setIsLoading(false);
+    }, 1500);
+  };
+
+  const handleDownloadAPK = () => {
+    window.open('https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk', '_blank');
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-purple-500/30 shadow-2xl">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-purple-500/30 shadow-2xl">
         <DialogHeader className="text-center space-y-4">
           <div className="mx-auto w-20 h-20 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-bounce">
             <Music className="w-10 h-10 text-white animate-pulse" />
@@ -83,15 +95,43 @@ export const WelcomeModal = () => {
           </div>
         </div>
 
+        {/* Download APK Section - Only show on web browsers, not in native app */}
+        {!isNativeApp && isMobile && (
+          <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl p-6 border border-green-500/30 shadow-lg mb-6">
+            <h4 className="font-bold text-white text-lg mb-3 flex items-center gap-2">
+              <Smartphone className="w-6 h-6" />
+              📱 Descarga la App Nativa
+            </h4>
+            <p className="text-gray-300 mb-4">
+              Obtén la mejor experiencia con nuestra aplicación nativa para Android
+            </p>
+            <Button 
+              onClick={handleDownloadAPK}
+              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-green-500/30 transform hover:scale-105 transition-all duration-300"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Descargar APK (v1.1.0)
+            </Button>
+          </div>
+        )}
+
         <div className="flex justify-center pt-6">
           <Button 
             onClick={handleClose} 
-            className="px-12 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 animate-pulse"
+            disabled={isLoading}
+            className="px-12 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span className="flex items-center gap-3">
-              ¡Comencemos! 
-              <span className="text-2xl">🎉</span>
-            </span>
+            {isLoading ? (
+              <span className="flex items-center gap-3">
+                <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                Cargando...
+              </span>
+            ) : (
+              <span className="flex items-center gap-3 animate-pulse">
+                ¡Comencemos! 
+                <span className="text-2xl">🎉</span>
+              </span>
+            )}
           </Button>
         </div>
       </DialogContent>
