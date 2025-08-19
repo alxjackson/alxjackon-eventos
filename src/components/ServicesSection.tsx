@@ -55,19 +55,20 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="servicios" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="servicios" className="py-20 px-4 bg-gradient-to-b from-transparent to-black/20">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            Nuestros Servicios
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-2 bg-purple-500/20 px-4 py-2 rounded-full mb-4">
+            <Music className="w-5 h-5 text-purple-400" />
+            <span className="text-purple-300 font-medium">Nuestros Servicios</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Entretenimiento
             </span>{" "}
             para Cada Ocasión
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Desde fiestas infantiles hasta eventos corporativos, llevamos la magia del espectáculo 
             a cualquier celebración con nuestros personajes icónicos.
           </p>
@@ -77,31 +78,31 @@ export const ServicesSection = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-luxury transition-all duration-300 border-border/50 hover:border-primary/30">
+              <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105">
                 <CardHeader className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${service.color}`}>
-                      <IconComponent className="w-6 h-6" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
                       {service.badge}
                     </Badge>
                   </div>
                   <div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-2xl text-white group-hover:text-purple-300 transition-colors">
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="mt-2">
+                    <CardDescription className="mt-3 text-gray-300 leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        {feature}
+                      <li key={idx} className="flex items-center gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                        <span className="font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
