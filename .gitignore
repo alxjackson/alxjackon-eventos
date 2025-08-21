@@ -12,11 +12,13 @@ dist
 dist-ssr
 *.local
 
-# Environment variables
+# Environment variables - INFORMACIÓN SENSIBLE
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+*.env
 
 # Capacitor
 android/
@@ -36,3 +38,55 @@ ios/
 
 # OS generated files
 Thumbs.db
+
+# INFORMACIÓN SENSIBLE Y CREDENCIALES
+# API Keys y tokens
+*.key
+*.pem
+*.p12
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# Archivos de configuración con credenciales
+config.json
+secrets.json
+credentials.json
+.secrets
+.credentials
+
+# Archivos de base de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de backup con información sensible
+backup/
+backups/
+*.backup
+*.bak
+
+# Archivos temporales con datos sensibles
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Archivos de certificados y llaves
+certificates/
+certs/
+ssl/
+*.crt
+*.cert
+*.ca-bundle
+
+# Archivos de configuración de servidores
+.htaccess
+.htpasswd
+nginx.conf
+apache.conf
+
+# Archivos de logs que pueden contener información sensible
+access.log
+error.log
+debug.log
