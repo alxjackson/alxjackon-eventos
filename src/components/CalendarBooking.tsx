@@ -87,7 +87,7 @@ const CalendarBooking = () => {
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
-                  className="bg-white/10 border-white/20 text-white"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                   required
                 />
               </div>
@@ -101,12 +101,12 @@ const CalendarBooking = () => {
                   id="time"
                   value={selectedTime}
                   onChange={(e) => setSelectedTime(e.target.value)}
-                  className="w-full p-2 rounded-md bg-white/10 border border-white/20 text-white"
+                  className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white focus:bg-white/30 focus:border-white/50"
                   required
                 >
-                  <option value="">Seleccionar hora</option>
+                  <option value="" className="bg-gray-800 text-white">Seleccionar hora</option>
                   {timeSlots.map((time) => (
-                    <option key={time} value={time} className="bg-gray-800">
+                    <option key={time} value={time} className="bg-gray-800 text-white">
                       {time}
                     </option>
                   ))}
@@ -126,7 +126,7 @@ const CalendarBooking = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="bg-white/10 border-white/20 text-white"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                   placeholder="Tu nombre completo"
                   required
                 />
@@ -143,7 +143,7 @@ const CalendarBooking = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="bg-white/10 border-white/20 text-white"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                   placeholder="Tu número de teléfono"
                   required
                 />
@@ -162,7 +162,7 @@ const CalendarBooking = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="bg-white/10 border-white/20 text-white"
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                   placeholder="tu@email.com"
                   required
                 />
@@ -177,12 +177,12 @@ const CalendarBooking = () => {
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleInputChange}
-                  className="w-full p-2 rounded-md bg-white/10 border border-white/20 text-white"
+                  className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white focus:bg-white/30 focus:border-white/50"
                   required
                 >
-                  <option value="">Seleccionar tipo</option>
+                  <option value="" className="bg-gray-800 text-white">Seleccionar tipo</option>
                   {eventTypes.map((type) => (
-                    <option key={type} value={type} className="bg-gray-800">
+                    <option key={type} value={type} className="bg-gray-800 text-white">
                       {type}
                     </option>
                   ))}
@@ -200,7 +200,7 @@ const CalendarBooking = () => {
                 name="location"
                 value={formData.location}
                 onChange={handleInputChange}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                 placeholder="Dirección completa del evento"
                 required
               />
@@ -215,7 +215,7 @@ const CalendarBooking = () => {
                 name="notes"
                 value={formData.notes}
                 onChange={handleInputChange}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-white/50"
                 placeholder="Detalles especiales, número de invitados, preferencias musicales, etc."
                 rows={4}
               />
