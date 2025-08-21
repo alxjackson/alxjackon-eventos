@@ -57,7 +57,7 @@ const CalendarBooking = () => {
 📍 Ubicación: ${formData.location}
 📝 Notas: ${formData.notes}`;
 
-    const whatsappUrl = `https://wa.me/5215617184109?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5217292355348?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

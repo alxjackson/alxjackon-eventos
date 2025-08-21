@@ -9,19 +9,19 @@ export const FloatingActionButton = () => {
     {
       icon: Phone,
       label: "Llamar",
-      action: () => window.open("tel:+525512345678"),
+      action: () => window.open("tel:+5217292355348"),
       color: "bg-green-500 hover:bg-green-600"
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      action: () => window.open("https://wa.me/525512345678?text=Hola, me interesa contratar un show para mi evento"),
+      action: () => window.open("https://wa.me/5217292355348?text=Hola, me interesa contratar un show para mi evento"),
       color: "bg-green-600 hover:bg-green-700"
     },
     {
       icon: Mail,
       label: "Email",
-      action: () => window.open("mailto:contacto@alxjackson.com?subject=Consulta sobre evento"),
+      action: () => window.open("mailto:alxjacksonanimacion@outlook.es?subject=Consulta sobre evento"),
       color: "bg-blue-500 hover:bg-blue-600"
     }
   ];

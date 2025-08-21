@@ -39,8 +39,8 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Teléfono</h4>
-                    <p className="text-gray-300">+52 (55) 1234-5678</p>
-                    <p className="text-gray-300">+52 (55) 8765-4321</p>
+                    <p className="text-gray-300">+52 729 235 5348</p>
+                    <p className="text-gray-300">+52 56 1718 4109 (Soporte Técnico)</p>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
-                    <p className="text-gray-300">contacto@alxjackson.com</p>
+                    <p className="text-gray-300">alxjacksonanimacion@outlook.es</p>
                     <p className="text-gray-300">eventos@alxjackson.com</p>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Ubicación</h4>
                     <p className="text-gray-300">Servicio en toda la República Mexicana</p>
-                    <p className="text-gray-300">Base: Ciudad de México</p>
+                    <p className="text-gray-300">Base: Toluca, Edo. Mex</p>
                   </div>
                 </div>
 
