@@ -6,7 +6,7 @@ Plataforma de entretenimiento premium para eventos únicos con artistas de renom
 
 ### 📱 Aplicación Móvil Nativa ✅
 - App Android con Capacitor v7.4.2 configurada
-- APK generada y disponible para descarga (v1.1.0)
+- APK generada y disponible para descarga (v1.1.1)
 - SplashScreen personalizado con branding AlxJackson
 - Detección automática de plataforma nativa vs web
 - Descarga inteligente de APK (solo en navegadores móviles)
@@ -133,8 +133,12 @@ npm run cap:sync
 - Logo personalizado y favicon
 - Branding DjWacko completo
 - Páginas legales (términos y privacidad)
+- **NUEVO**: Política de cancelación detallada
+- **NUEVO**: Preguntas frecuentes (FAQ) interactivo
 - Footer con contacto developer
 - Integración WhatsApp para reservaciones
+- **NUEVO**: Botón descarga APK optimizado
+- **NUEVO**: Limpieza completa de archivos obsoletos
 
 ### 🚀 Listo para producción:
 - Deployment en Vercel configurado
@@ -153,10 +157,10 @@ npm run cap:sync
 
 **APK Android disponible:**
 ```
-https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk
+https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.1/app-release.apk
 ```
 
-- **Versión**: v1.1.0
+- **Versión**: v1.1.1
 - **Tamaño**: ~8MB
 - **Compatibilidad**: Android 7.0+
 - **Descarga automática**: Solo en navegadores móviles

@@ -43,8 +43,8 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/terms" className="hover:text-purple-400 transition-colors">Términos y Condiciones</Link></li>
               <li><Link to="/privacy" className="hover:text-purple-400 transition-colors">Política de Privacidad</Link></li>
-              <li>Política de Cancelación</li>
-              <li>Preguntas Frecuentes</li>
+              <li><Link to="/cancellation" className="hover:text-purple-400 transition-colors">Política de Cancelación</Link></li>
+              <li><Link to="/faq" className="hover:text-purple-400 transition-colors">Preguntas Frecuentes</Link></li>
             </ul>
           </div>
 
