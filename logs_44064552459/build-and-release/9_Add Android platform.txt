@@ -1,23 +1,23 @@
-﻿2025-08-23T14:09:36.2572462Z ##[group]Run npx cap add android
-2025-08-23T14:09:36.2572980Z [36;1mnpx cap add android[0m
-2025-08-23T14:09:36.2619377Z shell: /usr/bin/bash -e {0}
-2025-08-23T14:09:36.2619616Z env:
-2025-08-23T14:09:36.2619893Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:36.2620348Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:36.2620863Z ##[endgroup]
-2025-08-23T14:09:37.0836404Z ✔ Adding native android project in android in 35.92ms
-2025-08-23T14:09:37.0837216Z ✔ add in 36.66ms
-2025-08-23T14:09:37.1984120Z ✔ Copying web assets from dist to android/app/src/main/assets/public in 58.67ms
-2025-08-23T14:09:37.1989711Z ✔ Creating capacitor.config.json in android/app/src/main/assets in 415.61μs
-2025-08-23T14:09:37.2131257Z ✔ copy android in 100.04ms
-2025-08-23T14:09:37.2511131Z ✔ Updating Android plugins in 11.13ms
-2025-08-23T14:09:37.2533180Z [info] Found 4 Capacitor plugins for android:
-2025-08-23T14:09:37.2533697Z        @capacitor/camera@7.0.2
-2025-08-23T14:09:37.2534114Z        @capacitor/device@7.0.2
-2025-08-23T14:09:37.2534442Z        @capacitor/geolocation@7.1.5
-2025-08-23T14:09:37.2534825Z        @capacitor/push-notifications@7.0.2
-2025-08-23T14:09:37.2940057Z ✔ update android in 68.42ms
-2025-08-23T14:09:37.3067841Z ✔ Syncing Gradle in 221.87μs
-2025-08-23T14:09:37.3070127Z [success] android platform added!
-2025-08-23T14:09:37.3070783Z Follow the Developer Workflow guide to get building:
-2025-08-23T14:09:37.3071737Z https://capacitorjs.com/docs/basics/workflow
+﻿2025-08-23T14:18:28.2950546Z ##[group]Run npx cap add android
+2025-08-23T14:18:28.2951061Z [36;1mnpx cap add android[0m
+2025-08-23T14:18:28.3002482Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:18:28.3002732Z env:
+2025-08-23T14:18:28.3003020Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:28.3003507Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:28.3003852Z ##[endgroup]
+2025-08-23T14:18:29.0828286Z ✔ Adding native android project in android in 35.73ms
+2025-08-23T14:18:29.0829387Z ✔ add in 36.44ms
+2025-08-23T14:18:29.2010654Z ✔ Copying web assets from dist to android/app/src/main/assets/public in 62.29ms
+2025-08-23T14:18:29.2017826Z ✔ Creating capacitor.config.json in android/app/src/main/assets in 521.83μs
+2025-08-23T14:18:29.2155453Z ✔ copy android in 102.34ms
+2025-08-23T14:18:29.2570721Z ✔ Updating Android plugins in 12.36ms
+2025-08-23T14:18:29.2592507Z [info] Found 4 Capacitor plugins for android:
+2025-08-23T14:18:29.2593068Z        @capacitor/camera@7.0.2
+2025-08-23T14:18:29.2593457Z        @capacitor/device@7.0.2
+2025-08-23T14:18:29.2593748Z        @capacitor/geolocation@7.1.5
+2025-08-23T14:18:29.2594079Z        @capacitor/push-notifications@7.0.2
+2025-08-23T14:18:29.2972244Z ✔ update android in 65.49ms
+2025-08-23T14:18:29.3097998Z ✔ Syncing Gradle in 186.64μs
+2025-08-23T14:18:29.3100369Z [success] android platform added!
+2025-08-23T14:18:29.3101047Z Follow the Developer Workflow guide to get building:
+2025-08-23T14:18:29.3101962Z https://capacitorjs.com/docs/basics/workflow

@@ -1,14 +1,14 @@
-﻿2025-08-23T14:09:20.2979549Z ##[group]Run npm install
-2025-08-23T14:09:20.2979833Z [36;1mnpm install[0m
-2025-08-23T14:09:20.3021066Z shell: /usr/bin/bash -e {0}
-2025-08-23T14:09:20.3021307Z env:
-2025-08-23T14:09:20.3021711Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:20.3022195Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:20.3022774Z ##[endgroup]
-2025-08-23T14:09:29.9178255Z 
-2025-08-23T14:09:29.9179233Z added 485 packages, and audited 486 packages in 10s
-2025-08-23T14:09:29.9179866Z 
-2025-08-23T14:09:29.9180284Z 58 packages are looking for funding
-2025-08-23T14:09:29.9180974Z   run `npm fund` for details
-2025-08-23T14:09:29.9191462Z 
-2025-08-23T14:09:29.9191929Z found 0 vulnerabilities
+﻿2025-08-23T14:18:13.2480999Z ##[group]Run npm install
+2025-08-23T14:18:13.2481290Z [36;1mnpm install[0m
+2025-08-23T14:18:13.2521847Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:18:13.2522083Z env:
+2025-08-23T14:18:13.2522385Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:13.2522846Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:13.2523380Z ##[endgroup]
+2025-08-23T14:18:22.0548153Z 
+2025-08-23T14:18:22.0549165Z added 485 packages, and audited 486 packages in 9s
+2025-08-23T14:18:22.0549954Z 
+2025-08-23T14:18:22.0550389Z 58 packages are looking for funding
+2025-08-23T14:18:22.0550972Z   run `npm fund` for details
+2025-08-23T14:18:22.0563217Z 
+2025-08-23T14:18:22.0563651Z found 0 vulnerabilities

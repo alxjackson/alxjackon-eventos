@@ -1,28 +1,28 @@
-﻿2025-08-23T14:09:31.3045975Z ##[group]Run npm run build
-2025-08-23T14:09:31.3046494Z [36;1mnpm run build[0m
-2025-08-23T14:09:31.3106110Z shell: /usr/bin/bash -e {0}
-2025-08-23T14:09:31.3106508Z env:
-2025-08-23T14:09:31.3107006Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:31.3107827Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-23T14:09:31.3108431Z ##[endgroup]
-2025-08-23T14:09:31.4346708Z 
-2025-08-23T14:09:31.4347817Z > alxjackson-eventos@2.0.19 build
-2025-08-23T14:09:31.4348289Z > vite build
-2025-08-23T14:09:31.4348461Z 
-2025-08-23T14:09:31.6509734Z [36mvite v7.1.3 [32mbuilding for production...[36m[39m
-2025-08-23T14:09:31.9400997Z transforming...
-2025-08-23T14:09:35.7756679Z [32m✓[39m 1832 modules transformed.
-2025-08-23T14:09:36.0275417Z rendering chunks...
-2025-08-23T14:09:36.1922701Z computing gzip size...
-2025-08-23T14:09:36.2108846Z [2mdist/[22m[32mindex.html                      [39m[1m[2m  1.36 kB[22m[1m[22m[2m │ gzip:   0.62 kB[22m
-2025-08-23T14:09:36.2109847Z [2mdist/[22m[2massets/[22m[32mhero-stage-BvexK0N7.jpg  [39m[1m[2m 99.78 kB[22m[1m[22m
-2025-08-23T14:09:36.2110938Z [2mdist/[22m[2massets/[22m[35mindex-DrjGe-8k.css       [39m[1m[2m 99.06 kB[22m[1m[22m[2m │ gzip:  15.88 kB[22m
-2025-08-23T14:09:36.2112227Z [2mdist/[22m[2massets/[22m[36mweb-B78bfD9k.js          [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
-2025-08-23T14:09:36.2113104Z [2mdist/[22m[2massets/[22m[36mweb-DbmFKD4m.js          [39m[1m[2m  2.44 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
-2025-08-23T14:09:36.2114254Z [2mdist/[22m[2massets/[22m[36mindex-Di4SXYkV.js        [39m[1m[33m694.12 kB[39m[22m[2m │ gzip: 196.92 kB[22m
-2025-08-23T14:09:36.2114796Z [33m
-2025-08-23T14:09:36.2115184Z (!) Some chunks are larger than 500 kB after minification. Consider:
-2025-08-23T14:09:36.2115661Z - Using dynamic import() to code-split the application
-2025-08-23T14:09:36.2116461Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
-2025-08-23T14:09:36.2117725Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
-2025-08-23T14:09:36.2118221Z [32m✓ built in 4.54s[39m
+﻿2025-08-23T14:18:23.4485472Z ##[group]Run npm run build
+2025-08-23T14:18:23.4485742Z [36;1mnpm run build[0m
+2025-08-23T14:18:23.4526567Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:18:23.4526806Z env:
+2025-08-23T14:18:23.4527093Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:23.4527559Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:18:23.4527907Z ##[endgroup]
+2025-08-23T14:18:23.5750723Z 
+2025-08-23T14:18:23.5751278Z > alxjackson-eventos@2.0.19 build
+2025-08-23T14:18:23.5751812Z > vite build
+2025-08-23T14:18:23.5751953Z 
+2025-08-23T14:18:23.8925188Z [36mvite v7.1.3 [32mbuilding for production...[36m[39m
+2025-08-23T14:18:24.1715642Z transforming...
+2025-08-23T14:18:27.8244197Z [32m✓[39m 1832 modules transformed.
+2025-08-23T14:18:28.0653430Z rendering chunks...
+2025-08-23T14:18:28.2264852Z computing gzip size...
+2025-08-23T14:18:28.2456102Z [2mdist/[22m[32mindex.html                      [39m[1m[2m  1.36 kB[22m[1m[22m[2m │ gzip:   0.62 kB[22m
+2025-08-23T14:18:28.2457453Z [2mdist/[22m[2massets/[22m[32mhero-stage-BvexK0N7.jpg  [39m[1m[2m 99.78 kB[22m[1m[22m
+2025-08-23T14:18:28.2458802Z [2mdist/[22m[2massets/[22m[35mindex-DrjGe-8k.css       [39m[1m[2m 99.06 kB[22m[1m[22m[2m │ gzip:  15.88 kB[22m
+2025-08-23T14:18:28.2460187Z [2mdist/[22m[2massets/[22m[36mweb-B78bfD9k.js          [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+2025-08-23T14:18:28.2461535Z [2mdist/[22m[2massets/[22m[36mweb-DbmFKD4m.js          [39m[1m[2m  2.44 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+2025-08-23T14:18:28.2463088Z [2mdist/[22m[2massets/[22m[36mindex-Di4SXYkV.js        [39m[1m[33m694.12 kB[39m[22m[2m │ gzip: 196.92 kB[22m
+2025-08-23T14:18:28.2463901Z [33m
+2025-08-23T14:18:28.2464497Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-08-23T14:18:28.2465244Z - Using dynamic import() to code-split the application
+2025-08-23T14:18:28.2466539Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-08-23T14:18:28.2467634Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2025-08-23T14:18:28.2468089Z [32m✓ built in 4.33s[39m
