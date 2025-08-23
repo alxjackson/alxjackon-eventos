@@ -1,0 +1,14 @@
+﻿2025-08-23T14:04:31.3428578Z ##[group]Run npm install
+2025-08-23T14:04:31.3428844Z [36;1mnpm install[0m
+2025-08-23T14:04:31.3468785Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:04:31.3469015Z env:
+2025-08-23T14:04:31.3469282Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:04:31.3469746Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:04:31.3470266Z ##[endgroup]
+2025-08-23T14:04:42.0907865Z 
+2025-08-23T14:04:42.0908686Z added 485 packages, and audited 486 packages in 11s
+2025-08-23T14:04:42.0909161Z 
+2025-08-23T14:04:42.0909448Z 58 packages are looking for funding
+2025-08-23T14:04:42.0909908Z   run `npm fund` for details
+2025-08-23T14:04:42.0920770Z 
+2025-08-23T14:04:42.0921121Z found 0 vulnerabilities
