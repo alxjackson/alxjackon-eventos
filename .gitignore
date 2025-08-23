@@ -90,3 +90,5 @@ apache.conf
 access.log
 error.log
 debug.log
+
+.vercel
