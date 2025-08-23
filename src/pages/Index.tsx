@@ -20,7 +20,7 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const isNativeApp = Capacitor.isNativePlatform();
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const showAPKButton = !isNativeApp; // Show on all web browsers, not just mobile
+  const showAndroidAppButton = !isNativeApp; // Show on all web browsers, not just mobile
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,7 +30,7 @@ const Index = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDownloadAPK = () => {
+  const handleDownloadAndroidApp = () => {
     window.open('https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk', '_blank');
   };
 
@@ -43,21 +43,27 @@ const Index = () => {
       <WelcomeModal />
       <Header />
       
-      {/* Download APK Banner - Only show on web browsers, not in native app */}
-      {showAPKButton && (
+      {/* Download Android App Banner - Only show on web browsers, not in native app */}
+      {showAndroidAppButton && (
         <div className="bg-gradient-to-r from-green-600 to-blue-600 py-3 px-4 text-center">
           <div className="max-w-4xl mx-auto flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-3">
-              <Smartphone className="w-5 h-5 text-white" />
+              <div className="relative">
+                <Smartphone className="w-5 h-5 text-white animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+              </div>
               <span className="text-white font-medium">¡Descarga nuestra App Nativa!</span>
             </div>
             <Button 
-              onClick={handleDownloadAPK}
+              onClick={handleDownloadAndroidApp}
               size="sm"
-              className="bg-white text-green-600 hover:bg-gray-100 font-bold transition-all duration-200 hover:scale-105"
+              className="bg-white text-green-600 hover:bg-gray-100 font-bold transition-all duration-200 hover:scale-105 flex items-center gap-2"
             >
-              <Download className="w-4 h-4 mr-2" />
-              Descargar APK
+              <div className="relative">
+                <Smartphone className="w-4 h-4 animate-bounce" />
+                <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+              </div>
+              Aplicación para Android
             </Button>
           </div>
         </div>

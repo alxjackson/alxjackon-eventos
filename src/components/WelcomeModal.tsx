@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Music, Sparkles, Calendar, Download, Smartphone } from "lucide-react";
+import { X, Download, Music, Calendar, Users, Star, Smartphone, AlertTriangle, Sparkles } from "lucide-react";
 import { Capacitor } from "@capacitor/core";
 
 export const WelcomeModal = () => {
@@ -27,7 +27,7 @@ export const WelcomeModal = () => {
     }, 1500);
   };
 
-  const handleDownloadAPK = () => {
+  const handleDownloadAndroidApp = () => {
     window.open('https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk', '_blank');
   };
 
@@ -95,22 +95,28 @@ export const WelcomeModal = () => {
           </div>
         </div>
 
-        {/* Download APK Section - Only show on web browsers, not in native app */}
+        {/* Download Android App Section - Only show on web browsers, not in native app */}
         {!isNativeApp && isMobile && (
           <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl p-6 border border-green-500/30 shadow-lg mb-6">
             <h4 className="font-bold text-white text-lg mb-3 flex items-center gap-2">
-              <Smartphone className="w-6 h-6" />
-              📱 Descarga la App Nativa
+              <div className="relative">
+                <Smartphone className="w-5 h-5 text-green-400 animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+              </div>
+              📱 Descarga Nuestra App
             </h4>
-            <p className="text-gray-300 mb-4">
+            <p className="text-white/80 text-sm mb-4">
               Obtén la mejor experiencia con nuestra aplicación nativa para Android
             </p>
             <Button 
-              onClick={handleDownloadAPK}
-              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-green-500/30 transform hover:scale-105 transition-all duration-300"
+              onClick={handleDownloadAndroidApp}
+              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-green-500/30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <Download className="w-5 h-5 mr-2" />
-              Descargar APK (v1.1.0)
+              <div className="relative">
+                <Smartphone className="w-5 h-5 animate-bounce" />
+                <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
+              </div>
+              Aplicación para Android (v1.1.0)
             </Button>
           </div>
         )}
