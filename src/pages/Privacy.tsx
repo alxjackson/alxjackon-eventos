@@ -27,8 +27,8 @@ export const Privacy = () => {
               <h1 className="text-4xl font-bold text-white">Política de Privacidad</h1>
             </div>
 
-            <div className="prose prose-invert max-w-none text-gray-300">
-              <p className="text-lg mb-6">
+            <div className="prose prose-invert max-w-none text-white/90">
+              <p className="text-lg mb-6 text-white/90">
                 Última actualización: 19 de agosto de 2025
               </p>
 
@@ -37,10 +37,10 @@ export const Privacy = () => {
                   <Eye className="w-6 h-6 text-blue-400" />
                   1. Información que Recopilamos
                 </h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   En AlxJackson Entertainment recopilamos la siguiente información para brindar nuestros servicios:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li><strong>Información Personal:</strong> Nombre, email, teléfono, dirección</li>
                   <li><strong>Información del Evento:</strong> Fecha, ubicación, tipo de celebración, número de invitados</li>
                   <li><strong>Información de Pago:</strong> Datos necesarios para procesar pagos (procesados de forma segura)</li>
@@ -53,7 +53,7 @@ export const Privacy = () => {
                   <Database className="w-6 h-6 text-purple-400" />
                   2. Cómo Usamos su Información
                 </h2>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-2 text-white/90">
                   <li>Procesar y confirmar reservaciones de eventos</li>
                   <li>Comunicarnos sobre detalles del evento y actualizaciones</li>
                   <li>Generar códigos QR únicos de confirmación</li>
@@ -69,10 +69,10 @@ export const Privacy = () => {
                   <Lock className="w-6 h-6 text-yellow-400" />
                   3. Protección de Datos
                 </h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Implementamos medidas de seguridad robustas para proteger su información:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li><strong>Encriptación:</strong> Todos los datos se transmiten usando SSL/TLS</li>
                   <li><strong>Autenticación:</strong> Sistema seguro de login con Supabase Auth</li>
                   <li><strong>Base de Datos:</strong> PostgreSQL con Row Level Security (RLS)</li>
@@ -83,10 +83,10 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">4. Compartir Información</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   NO vendemos, alquilamos o compartimos su información personal con terceros, excepto en los siguientes casos:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li><strong>Proveedores de Servicios:</strong> Procesadores de pago, servicios de email (bajo estrictos acuerdos de confidencialidad)</li>
                   <li><strong>Requerimientos Legales:</strong> Cuando sea requerido por ley o autoridades competentes</li>
                   <li><strong>Protección de Derechos:</strong> Para proteger nuestros derechos, propiedad o seguridad</li>
@@ -95,10 +95,10 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">5. Sus Derechos</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Usted tiene los siguientes derechos sobre su información personal:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li><strong>Acceso:</strong> Solicitar una copia de sus datos personales</li>
                   <li><strong>Rectificación:</strong> Corregir información inexacta o incompleta</li>
                   <li><strong>Eliminación:</strong> Solicitar la eliminación de sus datos (sujeto a obligaciones legales)</li>
@@ -109,26 +109,26 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">6. Cookies y Tecnologías Similares</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Utilizamos cookies y tecnologías similares para:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li>Mantener su sesión activa</li>
                   <li>Recordar sus preferencias</li>
                   <li>Analizar el uso de la plataforma</li>
                   <li>Mejorar la funcionalidad del sitio</li>
                 </ul>
-                <p className="mt-4">
+                <p className="mt-4 text-white/90 leading-relaxed">
                   Puede configurar su navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.
                 </p>
               </section>
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">7. Retención de Datos</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Conservamos su información personal durante el tiempo necesario para:
                 </p>
-                <ul className="list-disc pl-6 mt-4 space-y-2">
+                <ul className="list-disc pl-6 mt-4 space-y-2 text-white/90">
                   <li>Cumplir con los propósitos para los que fue recopilada</li>
                   <li>Cumplir con obligaciones legales y fiscales (mínimo 5 años)</li>
                   <li>Resolver disputas y hacer cumplir nuestros acuerdos</li>
@@ -137,7 +137,7 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">8. Menores de Edad</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Nuestros servicios están dirigidos a personas mayores de 18 años. No recopilamos intencionalmente 
                   información personal de menores de 13 años sin el consentimiento de los padres.
                 </p>
@@ -145,7 +145,7 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">9. Cambios a esta Política</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Podemos actualizar esta política de privacidad ocasionalmente. Los cambios significativos serán 
                   notificados por email o mediante aviso prominente en la plataforma.
                 </p>
@@ -153,10 +153,10 @@ export const Privacy = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4">10. Contacto</h2>
-                <p>
+                <p className="text-white/90 leading-relaxed">
                   Para preguntas sobre esta política de privacidad o para ejercer sus derechos:
                 </p>
-                <ul className="list-none mt-4 space-y-2">
+                <ul className="list-none mt-4 space-y-2 text-white/90">
                   <li>📧 Email: privacy@alxjackson.com</li>
                   <li>📱 WhatsApp: +52 55 1234 5678</li>
                   <li>🌐 Web: alxjackson-eventos.vercel.app</li>
@@ -172,8 +172,22 @@ export const Privacy = () => {
                   🎵 Desarrollado por <span className="text-purple-400 font-semibold">DjWacko</span> - Especialista en entretenimiento digital
                 </p>
                 <div className="flex justify-center gap-4 mt-3 text-sm">
-                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
-                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                  <a 
+                    href="https://wa.me/527292355348" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-green-400 hover:text-green-300 transition-colors"
+                  >
+                    💬 Contacto
+                  </a>
+                  <a 
+                    href="https://twitter.com/DjWackoCDMX" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    🐦 Social
+                  </a>
                 </div>
               </div>
             </div>

@@ -27,15 +27,15 @@ const Cancellation = () => {
             </Link>
           </div>
 
-          <Card className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl border-white/30 shadow-2xl mb-8">
+          <Card className="bg-white/95 backdrop-blur-xl border-gray-200 shadow-2xl mb-8">
             <CardContent className="p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl shadow-lg">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-white">Política de Cancelación</h1>
-                  <p className="text-white/90 text-sm mt-1 font-medium">AlxJackson Entertainment Platform</p>
+                  <h1 className="text-4xl font-bold text-gray-800">Política de Cancelación</h1>
+                  <p className="text-gray-600 text-sm mt-1 font-medium">AlxJackson Entertainment Platform</p>
                 </div>
               </div>
             </CardContent>
@@ -44,14 +44,14 @@ const Cancellation = () => {
           <div className="space-y-8">
           
           {/* Introducción */}
-          <Card className="bg-gradient-to-r from-gray-900/95 to-purple-900/95 border-purple-400/60 backdrop-blur-sm">
+          <Card className="bg-white/95 border-gray-200 backdrop-blur-sm">
             <CardContent className="p-8">
-              <div className="bg-black/40 rounded-lg p-6 backdrop-blur-sm">
+              <div className="bg-blue-50 rounded-lg p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
-                  <AlertCircle className="w-8 h-8 text-yellow-400 flex-shrink-0 mt-1" />
+                  <AlertCircle className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h2 className="text-2xl font-bold text-white mb-4">Información Importante</h2>
-                    <p className="text-white leading-relaxed font-semibold text-lg">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Información Importante</h2>
+                    <p className="text-gray-700 leading-relaxed font-semibold text-lg">
                       En AlxJackson Entertainment entendemos que pueden surgir imprevistos. 
                       Esta política está diseñada para ser justa tanto para nuestros clientes como para nuestros artistas.
                     </p>
@@ -107,40 +107,40 @@ const Cancellation = () => {
           </div>
 
           {/* Casos Especiales */}
-          <Card className="bg-blue-900/30 border-blue-500/30">
+          <Card className="bg-white/95 border-blue-200">
             <CardContent className="p-8">
-              <h2 className="text-xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+              <h2 className="text-xl font-bold text-blue-600 mb-6 flex items-center gap-3">
                 <RefreshCw className="w-6 h-6" />
                 Casos Especiales y Excepciones
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">🏥 Emergencias Médicas</h3>
-                  <ul className="space-y-2 text-white/90">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">🏥 Emergencias Médicas</h3>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• Certificado médico requerido</li>
                     <li>• 100% reembolso garantizado</li>
                     <li>• Opción de reprogramación sin costo</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">🌦️ Condiciones Climáticas</h3>
-                  <ul className="space-y-2 text-white/90">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">🌦️ Condiciones Climáticas</h3>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• Eventos al aire libre únicamente</li>
                     <li>• Reprogramación automática</li>
                     <li>• Sin penalizaciones aplicables</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">⚡ Fuerza Mayor</h3>
-                  <ul className="space-y-2 text-white/90">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">⚡ Fuerza Mayor</h3>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• Desastres naturales</li>
                     <li>• Restricciones gubernamentales</li>
                     <li>• 100% reembolso o reprogramación</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">🎭 Cancelación por Artista</h3>
-                  <ul className="space-y-2 text-white/90">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">🎭 Cancelación por Artista</h3>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• 100% reembolso inmediato</li>
                     <li>• Artista sustituto disponible</li>
                     <li>• Compensación adicional del 10%</li>
@@ -151,36 +151,36 @@ const Cancellation = () => {
           </Card>
 
           {/* Proceso de Cancelación */}
-          <Card className="bg-purple-900/30 border-purple-500/30">
+          <Card className="bg-white/95 border-purple-200">
             <CardContent className="p-8">
-              <h2 className="text-xl font-bold text-purple-400 mb-6">Proceso de Cancelación</h2>
+              <h2 className="text-xl font-bold text-purple-600 mb-6">Proceso de Cancelación</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
                   <div>
-                    <h3 className="font-semibold text-white">Contacto Inmediato</h3>
-                    <p className="text-gray-300">Notifica tu cancelación lo antes posible por WhatsApp o teléfono</p>
+                    <h3 className="font-semibold text-gray-800">Contacto Inmediato</h3>
+                    <p className="text-gray-600">Notifica tu cancelación lo antes posible por WhatsApp o teléfono</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
                   <div>
-                    <h3 className="font-semibold text-white">Documentación</h3>
-                    <p className="text-gray-300">Proporciona el motivo de cancelación y documentos si aplica</p>
+                    <h3 className="font-semibold text-gray-800">Documentación</h3>
+                    <p className="text-gray-600">Proporciona el motivo de cancelación y documentos si aplica</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
                   <div>
-                    <h3 className="font-semibold text-white">Evaluación</h3>
-                    <p className="text-gray-300">Revisamos tu caso y determinamos el reembolso aplicable</p>
+                    <h3 className="font-semibold text-gray-800">Evaluación</h3>
+                    <p className="text-gray-600">Revisamos tu caso y determinamos el reembolso aplicable</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</div>
                   <div>
-                    <h3 className="font-semibold text-white">Procesamiento</h3>
-                    <p className="text-gray-300">El reembolso se procesa en 5-7 días hábiles</p>
+                    <h3 className="font-semibold text-gray-800">Procesamiento</h3>
+                    <p className="text-gray-600">El reembolso se procesa en 5-7 días hábiles</p>
                   </div>
                 </div>
               </div>
@@ -221,23 +221,23 @@ const Cancellation = () => {
           </Card>
 
           {/* Nota Legal */}
-          <Card className="bg-gradient-to-r from-gray-900/95 to-purple-900/95 border-purple-400/60 backdrop-blur-sm">
+          <Card className="bg-white/95 border-purple-200 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="text-center">
-                <p className="mb-6 text-white text-base font-medium leading-relaxed">
-                  Esta política de cancelación forma parte de nuestros <Link to="/terms" className="text-purple-300 hover:text-purple-200 underline font-semibold">términos y condiciones</Link>. 
+                <p className="mb-6 text-gray-700 text-base font-medium leading-relaxed">
+                  Esta política de cancelación forma parte de nuestros <Link to="/terms" className="text-purple-600 hover:text-purple-500 underline font-semibold">términos y condiciones</Link>. 
                   Al contratar nuestros servicios, aceptas estas condiciones.
                 </p>
-                <p className="text-white text-lg font-bold mb-4">
-                  <strong>AlxJackson Entertainment</strong> - Desarrollado por <span className="text-purple-300 font-semibold">DjWacko</span>
+                <p className="text-gray-800 text-lg font-bold mb-4">
+                  <strong>AlxJackson Entertainment</strong> - Desarrollado por <span className="text-purple-600 font-semibold">DjWacko</span>
                 </p>
-                <div className="bg-black/40 rounded-lg p-4 backdrop-blur-sm">
+                <div className="bg-gray-100 rounded-lg p-4 backdrop-blur-sm">
                   <div className="flex flex-col sm:flex-row justify-center gap-4 text-base font-semibold">
-                    <span className="text-green-300 flex items-center justify-center gap-2">
-                      📱 <span className="text-white">Developer</span>
+                    <span className="text-green-600 flex items-center justify-center gap-2">
+                      📱 <span className="text-gray-800">Developer</span>
                     </span>
-                    <span className="text-blue-300 flex items-center justify-center gap-2">
-                      🐦 <span className="text-white">Twitter</span>
+                    <span className="text-blue-600 flex items-center justify-center gap-2">
+                      🐦 <span className="text-gray-800">Twitter</span>
                     </span>
                   </div>
                 </div>

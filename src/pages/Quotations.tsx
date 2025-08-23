@@ -18,9 +18,12 @@ export const Quotations = () => {
       }}></div>
       
       <div className="relative z-10">
-        {/* Header with Back Button */}
         <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center mb-8">
+          {/* Main Content */}
+          <QuotationCalculator />
+          
+          {/* Back Button - Centered at Bottom */}
+          <div className="flex justify-center mt-12 pb-8">
             <Button 
               variant="ghost" 
               size="lg" 
@@ -31,9 +34,6 @@ export const Quotations = () => {
               Regresar
             </Button>
           </div>
-
-          {/* Main Content */}
-          <QuotationCalculator />
         </div>
       </div>
 

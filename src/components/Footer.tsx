@@ -82,20 +82,24 @@ export const Footer = () => {
                   Contacto Digital
                 </h4>
                 <div className="space-y-3 text-white font-medium bg-black/20 rounded-lg p-4 backdrop-blur-sm">
-                  <p className="flex items-center gap-2">📧 contacto@alxjackson.com</p>
-                  <p className="flex items-center gap-2">📱 +52 722 123 4567</p>
-                  <div className="flex items-center gap-2 text-blue-300">
-                    <Twitter className="w-4 h-4" />
-                    <span>Sígueme en Twitter</span>
-                  </div>
+                  <p className="flex items-center gap-2">📧 alxjacksonanimacion@outlook.es</p>
                   <a 
-                    href="https://wa.me/525617184109" 
+                    href="https://wa.me/527292355348" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-green-300 hover:text-green-200 transition-colors font-semibold"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    WhatsApp AlxJackson
+                    Contacto
+                  </a>
+                  <a 
+                    href="https://twitter.com/DjWackoCDMX" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-300 hover:text-blue-200 transition-colors"
+                  >
+                    <Twitter className="w-4 h-4" />
+                    Sígueme
                   </a>
                 </div>
               </div>
@@ -129,13 +133,13 @@ export const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a 
-                href="https://wa.me/525617184109" 
+                href="https://wa.me/527292355348" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-green-600/20 hover:bg-green-600/30 text-green-300 px-4 py-2 rounded-lg transition-colors border border-green-500/30 font-semibold backdrop-blur-sm"
                 title="WhatsApp AlxJackson"
               >
-                📱 WhatsApp AlxJackson
+                💬 Chat Directo
               </a>
               <span className="text-white font-medium bg-purple-600/20 px-3 py-2 rounded-lg backdrop-blur-sm">🤝 Conéctate con nosotros</span>
             </div>
@@ -166,13 +170,13 @@ export const Footer = () => {
                   <span className="text-white font-semibold">🎵 Desarrollado con pasión y tecnología de vanguardias</span>
                   <div className="flex items-center gap-4">
                     <a 
-                      href="https://wa.me/525617184109" 
+                      href="https://wa.me/527292355348" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-green-600/20 hover:bg-green-600/30 text-green-300 px-3 py-1 rounded-full transition-colors border border-green-500/30 flex items-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      Developer
+                      Creador
                     </a>
                     <a 
                       href="https://twitter.com/DjWackoCDMX" 
@@ -181,7 +185,7 @@ export const Footer = () => {
                       className="bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 px-3 py-1 rounded-full transition-colors border border-blue-500/30 flex items-center gap-2"
                     >
                       <Twitter className="w-4 h-4" />
-                      Sígueme
+                      Social
                     </a>
                   </div>
                 </div>

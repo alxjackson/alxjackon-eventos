@@ -32,38 +32,26 @@ export const Header = () => {
             <h1 className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
               AlxJackson
             </h1>
-            <p className="text-xs text-muted-foreground">Entertainment Platform</p>
+            <p className="text-xs text-gray-600">Entertainment Platform</p>
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          <Link to="/terms" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link to="/terms" className="text-sm font-medium text-gray-800 hover:text-purple-600 transition-colors">
             Términos
           </Link>
-          <a href="#servicios" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="#servicios" className="text-sm font-medium text-gray-800 hover:text-purple-600 transition-colors">
             Servicios
           </a>
-          <Link to="/quotations" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link to="/quotations" className="text-sm font-medium text-gray-800 hover:text-purple-600 transition-colors">
             Cotizaciones
           </Link>
-          <Link to="/cancellation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link to="/cancellation" className="text-sm font-medium text-gray-800 hover:text-purple-600 transition-colors">
             Cancelaciones
           </Link>
-          <a 
-            href="#contacto" 
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactSection = document.getElementById('contacto');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.open('https://wa.me/525617184109', '_blank');
-              }
-            }}
-          >
-            Contacto
-          </a>
+          <Link to="/gallery" className="text-sm font-medium text-gray-800 hover:text-purple-600 transition-colors">
+            Galería
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -104,7 +92,7 @@ export const Header = () => {
           ) : (
             <>
               <Link to="/auth">
-                <Button variant="outline" size="sm" className="bg-white/10 text-white font-semibold hover:text-purple-300 hover:bg-white/20 border border-white/40 hover:border-purple-300/70 transition-all duration-200 shadow-lg backdrop-blur-sm">
+                <Button variant="outline" size="sm" className="bg-purple-100/90 text-purple-700 font-semibold hover:text-purple-900 hover:bg-purple-200/90 border border-purple-300 hover:border-purple-500 transition-all duration-200 shadow-lg backdrop-blur-sm">
                   <LogIn className="w-4 h-4 mr-2" />
                   Iniciar Sesión
                 </Button>
