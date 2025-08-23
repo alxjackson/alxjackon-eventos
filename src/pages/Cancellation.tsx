@@ -61,43 +61,43 @@ const Cancellation = () => {
 
           {/* Política de Cancelación por Tiempo */}
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-green-900/30 border-green-500/30">
+            <Card className="bg-green-800/50 border-green-400/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="text-center">
-                  <Clock className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-green-400 mb-2">30+ Días Antes</h3>
-                  <p className="text-sm text-gray-300 mb-4">Cancelación con 30 días o más de anticipación</p>
-                  <div className="bg-green-500/20 rounded-lg p-3">
-                    <p className="text-green-300 font-semibold">100% Reembolso</p>
-                    <p className="text-xs text-green-200 mt-1">Sin penalización</p>
+                  <Clock className="w-12 h-12 text-green-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-2">30+ Días Antes</h3>
+                  <p className="text-base text-white/90 mb-4">Cancelación con 30 días o más de anticipación</p>
+                  <div className="bg-green-600/40 rounded-lg p-4 border border-green-400/30">
+                    <p className="text-white font-bold text-lg">100% Reembolso</p>
+                    <p className="text-green-100 mt-1">Sin penalización</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-yellow-900/30 border-yellow-500/30">
+            <Card className="bg-yellow-800/50 border-yellow-400/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="text-center">
-                  <Clock className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-yellow-400 mb-2">15-29 Días Antes</h3>
-                  <p className="text-sm text-gray-300 mb-4">Cancelación entre 15 y 29 días</p>
-                  <div className="bg-yellow-500/20 rounded-lg p-3">
-                    <p className="text-yellow-300 font-semibold">75% Reembolso</p>
-                    <p className="text-xs text-yellow-200 mt-1">25% gastos administrativos</p>
+                  <Clock className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-2">15-29 Días Antes</h3>
+                  <p className="text-base text-white/90 mb-4">Cancelación entre 15 y 29 días</p>
+                  <div className="bg-yellow-600/40 rounded-lg p-4 border border-yellow-400/30">
+                    <p className="text-white font-bold text-lg">75% Reembolso</p>
+                    <p className="text-yellow-100 mt-1">25% gastos administrativos</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-red-900/30 border-red-500/30">
+            <Card className="bg-red-800/50 border-red-400/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="text-center">
-                  <Clock className="w-12 h-12 text-red-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-red-400 mb-2">Menos de 15 Días</h3>
-                  <p className="text-sm text-gray-300 mb-4">Cancelación con menos de 15 días</p>
-                  <div className="bg-red-500/20 rounded-lg p-3">
-                    <p className="text-red-300 font-semibold">50% Reembolso</p>
-                    <p className="text-xs text-red-200 mt-1">50% gastos de preparación</p>
+                  <Clock className="w-12 h-12 text-red-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-2">Menos de 15 Días</h3>
+                  <p className="text-base text-white/90 mb-4">Cancelación con menos de 15 días</p>
+                  <div className="bg-red-600/40 rounded-lg p-4 border border-red-400/30">
+                    <p className="text-white font-bold text-lg">50% Reembolso</p>
+                    <p className="text-red-100 mt-1">50% gastos de preparación</p>
                   </div>
                 </div>
               </CardContent>
@@ -113,32 +113,32 @@ const Cancellation = () => {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Emergencias Médicas</h3>
-                  <ul className="space-y-2 text-gray-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">🏥 Emergencias Médicas</h3>
+                  <ul className="space-y-2 text-white/90">
                     <li>• Certificado médico requerido</li>
                     <li>• 100% reembolso garantizado</li>
                     <li>• Opción de reprogramación sin costo</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Condiciones Climáticas</h3>
-                  <ul className="space-y-2 text-gray-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">🌦️ Condiciones Climáticas</h3>
+                  <ul className="space-y-2 text-white/90">
                     <li>• Eventos al aire libre únicamente</li>
                     <li>• Reprogramación automática</li>
                     <li>• Sin penalizaciones aplicables</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Fuerza Mayor</h3>
-                  <ul className="space-y-2 text-gray-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">⚡ Fuerza Mayor</h3>
+                  <ul className="space-y-2 text-white/90">
                     <li>• Desastres naturales</li>
                     <li>• Restricciones gubernamentales</li>
                     <li>• 100% reembolso o reprogramación</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Cancelación por Artista</h3>
-                  <ul className="space-y-2 text-gray-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">🎭 Cancelación por Artista</h3>
+                  <ul className="space-y-2 text-white/90">
                     <li>• 100% reembolso inmediato</li>
                     <li>• Artista sustituto disponible</li>
                     <li>• Compensación adicional del 10%</li>
@@ -186,27 +186,34 @@ const Cancellation = () => {
           </Card>
 
           {/* Contacto para Cancelaciones */}
-          <Card className="bg-gradient-to-r from-green-900/50 to-blue-900/50 border-green-500/30">
+          <Card className="bg-gradient-to-r from-green-800/60 to-blue-800/60 border-green-400/40 backdrop-blur-sm">
             <CardContent className="p-8">
-              <h2 className="text-xl font-bold text-white mb-6 text-center">¿Necesitas Cancelar un Evento?</h2>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">¿Necesitas Cancelar un Evento?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center">
                 <Button 
                   onClick={() => window.open('https://wa.me/525617184109', '_blank')}
-                  className="bg-green-600 hover:bg-green-700 text-white"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp: +52 56 1718 4109
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Alex - WhatsApp
                 </Button>
                 <Button 
                   onClick={() => window.open('tel:+525617184109', '_blank')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Llamar: +52 56 1718 4109
+                  <Phone className="w-5 h-5 mr-2" />
+                  Soporte - Llamar
+                </Button>
+                <Button 
+                  onClick={() => window.open('https://wa.me/525617184109', '_blank')}
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Desarrollador
                 </Button>
               </div>
-              <p className="text-center text-gray-300 mt-4 text-sm">
-                Horario de atención: Lunes a Domingo 9:00 AM - 10:00 PM
+              <p className="text-center text-white/90 mt-6 text-base font-medium">
+                📅 Horario de atención: Lunes a Domingo 9:00 AM - 10:00 PM
               </p>
             </CardContent>
           </Card>

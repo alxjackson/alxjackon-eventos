@@ -46,7 +46,19 @@ export const Header = () => {
           <Link to="/cancellation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Cancelaciones
           </Link>
-          <a href="#contacto" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a 
+            href="#contacto" 
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactSection = document.getElementById('contacto');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.open('https://wa.me/525617184109', '_blank');
+              }
+            }}
+          >
             Contacto
           </a>
         </nav>
