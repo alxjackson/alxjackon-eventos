@@ -25,6 +25,11 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
         
+    - name: Set JAVA_HOME
+      run: |
+        echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
+        echo "PATH=$JAVA_HOME/bin:$PATH" >> $GITHUB_ENV
+        
     - name: Setup Android SDK
       run: |
         yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
@@ -49,7 +54,8 @@ jobs:
       run: |
         cd android
         chmod +x ./gradlew
-        ./gradlew assembleRelease
+        export JAVA_HOME=$JAVA_HOME
+        ./gradlew assembleRelease --info
         
     - name: Get version from tag
       id: get_version
