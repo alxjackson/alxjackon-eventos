@@ -30,31 +30,33 @@ export const HeroSection = () => {
             </Badge>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
-              AlxJackson
-            </span>
-            <br />
-            <span className="text-foreground">
-              Entertainment
-            </span>
-          </h1>
+          <div className="text-center sm:text-left">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-hero bg-clip-text text-transparent">
+                AlxJackson
+              </span>
+              <br />
+              <span className="text-foreground">
+                Entertainment
+              </span>
+            </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-            Vive la magia de los grandes espectáculos. Freddy Mercury, Michael Jackson, Alex Vitor y más. 
-            <span className="text-accent font-semibold"> Reserva tu evento único</span> y 
-            obtén tu código QR de confirmación.
-          </p>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed mx-auto sm:mx-0">
+              Vive la magia de los grandes espectáculos. Freddy Mercury, Michael Jackson, Alex Vitor y más. 
+              <span className="text-accent font-semibold"> Reserva tu evento único</span> y 
+              obtén tu código QR de confirmación.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-              <Calendar className="w-5 h-5 mr-2" />
-              Reservar Evento
-            </Button>
-            <Button variant="luxury" size="lg" className="text-lg px-8 py-6">
-              <Sparkles className="w-5 h-5 mr-2" />
-              Ver Espectáculos
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center sm:justify-start">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300">
+                <Calendar className="w-5 h-5 mr-2" />
+                Reservar Evento
+              </Button>
+              <Button variant="luxury" size="lg" className="text-lg px-8 py-6 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300" onClick={() => window.location.href = '/gallery'}>
+                <Sparkles className="w-5 h-5 mr-2" />
+                Ver Espectáculos
+              </Button>
+            </div>
           </div>
 
           {/* Features Quick Info */}
