@@ -74,8 +74,10 @@ const Index = () => {
         <UpdateModal
           isOpen={showModal}
           onClose={dismissUpdate}
-          updateInfo={updateInfo}
           currentVersion={currentVersion}
+          newVersion={updateInfo.version}
+          changelog={updateInfo.changelog || []}
+          downloadUrl={updateInfo.downloadUrl}
         />
       )}
       

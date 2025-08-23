@@ -11,6 +11,7 @@
 		}
 	],
 	"settings": {
-		"powershell.cwd": "alx-show-flow-main"
+		"powershell.cwd": "alx-show-flow-main",
+		"java.configuration.updateBuildConfiguration": "automatic"
 	}
 }

@@ -43,6 +43,13 @@ Plataforma de entretenimiento premium para eventos únicos con artistas de renom
 - Estadísticas en vivo (247 usuarios, 12 eventos, 89 reservas, $125,450)
 - Configuración SMTP para envío de emails
 
+### 💰 Sistema de Cotizaciones Automáticas ✅
+- **Calculadora inteligente** para eventos fuera de CDMX/Toluca
+- **Origen dinámico**: CDMX (con DJ) o Toluca (sin DJ)
+- **Cálculos automáticos**: gasolina, peajes, hospedaje, alimentación
+- **Vehículo oficial**: Nissan Versa Sense 2028 (19 km/L)
+- **Términos y condiciones** integrados
+
 ### 🎨 Interfaz Profesional ✅
 - Diseño moderno con glassmorphism y gradients
 - Animaciones CSS personalizadas y loading states
@@ -59,10 +66,12 @@ Plataforma de entretenimiento premium para eventos únicos con artistas de renom
 - Historial de transacciones
 - **Nota**: Pendiente hasta obtener cuentas de pago verificadas
 
-### 🔔 Notificaciones Push
-- Alertas de eventos próximos
-- Confirmaciones de reservas
-- Mensajería en tiempo real
+### 🔔 Sistema de Notificaciones y Permisos ✅
+- **Notificaciones push** nativas para Android y web
+- **Permisos completos**: geolocalización, cámara, contactos, mensajes
+- **Detección de seguridad**: bloqueo automático en dispositivos rooteados
+- **Modal profesional** de solicitud de permisos
+- **Plugin nativo** SecurityPlugin para verificaciones avanzadas
 
 ## 🛠️ Stack Tecnológico
 
@@ -82,6 +91,8 @@ Plataforma de entretenimiento premium para eventos únicos con artistas de renom
 ### Móvil & Deployment
 - **Capacitor** - Framework híbrido para móviles
 - **Android Studio** - Desarrollo nativo Android
+- **Plugins nativos** - SecurityPlugin para detección de root
+- **Permisos Android** - 15+ permisos configurados
 - **Vercel** - Hosting y deployment automático
 
 ## 📱 Comandos de Desarrollo
@@ -139,6 +150,12 @@ npm run cap:sync
 - Integración WhatsApp para reservaciones
 - **NUEVO**: Botón descarga APK optimizado
 - **NUEVO**: Limpieza completa de archivos obsoletos
+- **NUEVO**: Sistema completo de permisos y seguridad
+- **NUEVO**: Calculadora de cotizaciones automáticas
+- **NUEVO**: Galería de espectáculos con placeholder
+- **NUEVO**: Detección de root/developer con bloqueo
+- **NUEVO**: Plugin nativo SecurityPlugin
+- **NUEVO**: Modal profesional de permisos
 
 ### 🚀 Listo para producción:
 - Deployment en Vercel configurado
@@ -149,8 +166,8 @@ npm run cap:sync
 ## 🎯 Próximos Hitos
 
 1. **Sistema de Pagos** - Integración con Stripe/PayPal (futuro)
-2. **Notificaciones Push** - Alertas en tiempo real
-3. **Analytics Avanzados** - Métricas detalladas
+2. **Analytics Avanzados** - Métricas detalladas
+3. **Galería de fotos** - Carrusel de imágenes de espectáculos
 4. **Optimizaciones** - Performance y SEO
 
 ## 📲 Descarga de la App
