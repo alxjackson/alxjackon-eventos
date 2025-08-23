@@ -43,6 +43,9 @@ export const Header = () => {
           <a href="#servicios" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Servicios
           </a>
+          <Link to="/quotations" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Cotizaciones
+          </Link>
           <Link to="/cancellation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Cancelaciones
           </Link>

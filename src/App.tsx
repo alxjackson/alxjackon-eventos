@@ -13,6 +13,7 @@ import Payments from './pages/Payments';
 import Cancellation from './pages/Cancellation';
 import FAQ from './pages/FAQ';
 import { Gallery } from './pages/Gallery';
+import { Quotations } from './pages/Quotations';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/cancellation" element={<Cancellation />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/quotations" element={<Quotations />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
