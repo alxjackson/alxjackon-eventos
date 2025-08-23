@@ -55,7 +55,9 @@ jobs:
         cd android
         chmod +x ./gradlew
         export JAVA_HOME=$JAVA_HOME
-        ./gradlew assembleRelease --info
+        export ORG_GRADLE_PROJECT_java_sourceCompatibility=17
+        export ORG_GRADLE_PROJECT_java_targetCompatibility=17
+        ./gradlew assembleRelease --info -Dorg.gradle.java.home=$JAVA_HOME
         
     - name: Get version from tag
       id: get_version
