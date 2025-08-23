@@ -1,4 +1,4 @@
-import { Music, Mail, Shield, Phone, MessageCircle, Twitter, Code } from "lucide-react";
+import { Mic, Mail, Shield, Phone, MessageCircle, Twitter, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -13,7 +13,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/25">
-                <Music className="w-6 h-6 text-white" />
+                <Mic className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="text-lg font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
@@ -81,18 +81,18 @@ export const Footer = () => {
                   <Mail className="w-5 h-5" />
                   Contacto Digital
                 </h4>
-                <div className="space-y-2 text-purple-100/80">
-                  <p>📧 contacto@alxjackson.com</p>
-                  <p>📱 +52 722 123 4567</p>
-                  <div className="flex items-center gap-2">
-                    <Twitter className="w-4 h-4 text-blue-400" />
-                    <span>Sígueme</span>
+                <div className="space-y-3 text-white font-medium bg-black/20 rounded-lg p-4 backdrop-blur-sm">
+                  <p className="flex items-center gap-2">📧 contacto@alxjackson.com</p>
+                  <p className="flex items-center gap-2">📱 +52 722 123 4567</p>
+                  <div className="flex items-center gap-2 text-blue-300">
+                    <Twitter className="w-4 h-4" />
+                    <span>Sígueme en Twitter</span>
                   </div>
                   <a 
                     href="https://wa.me/525617184109" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-green-300 hover:text-green-200 transition-colors font-semibold"
                   >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp AlxJackson
@@ -106,10 +106,10 @@ export const Footer = () => {
                   <Shield className="w-5 h-5" />
                   Ubicación Física
                 </h4>
-                <div className="space-y-1 text-purple-100/80">
-                  <p>📍 Ciudad Colón #25</p>
-                  <p>Moderna de la Cruz</p>
-                  <p>50180 Toluca de Lerdo, Méx.</p>
+                <div className="space-y-2 text-white font-medium bg-black/20 rounded-lg p-4 backdrop-blur-sm">
+                  <p className="flex items-center gap-2">📍 Ciudad Colón #25</p>
+                  <p className="ml-6">Moderna de la Cruz</p>
+                  <p className="ml-6">50180 Toluca de Lerdo, Méx.</p>
                 </div>
               </div>
             </div>
@@ -120,9 +120,9 @@ export const Footer = () => {
         <div className="border-t border-purple-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
-            <div className="text-sm text-purple-200/70 text-center md:text-left">
+            <div className="text-sm text-white font-medium text-center md:text-left bg-black/30 rounded-lg px-4 py-2 backdrop-blur-sm">
               © 2024 AlxJackson. Todos los derechos reservados.
-              <span className="mx-2">|</span>
+              <span className="mx-2 text-purple-300">|</span>
               Prohibida la redistribución sin autorización.
             </div>
 
@@ -132,12 +132,12 @@ export const Footer = () => {
                 href="https://wa.me/525617184109" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-300 transition-colors"
+                className="bg-green-600/20 hover:bg-green-600/30 text-green-300 px-4 py-2 rounded-lg transition-colors border border-green-500/30 font-semibold backdrop-blur-sm"
                 title="WhatsApp AlxJackson"
               >
                 📱 WhatsApp AlxJackson
               </a>
-              <span className="text-purple-300">🤝 Conéctate con nosotros</span>
+              <span className="text-white font-medium bg-purple-600/20 px-3 py-2 rounded-lg backdrop-blur-sm">🤝 Conéctate con nosotros</span>
             </div>
           </div>
 

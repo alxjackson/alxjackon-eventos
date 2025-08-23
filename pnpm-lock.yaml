@@ -110,6 +110,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.83.0
         version: 5.85.5(react@18.3.1)
+      ci:
+        specifier: ^2.3.0
+        version: 2.3.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -134,6 +137,9 @@ importers:
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      picomatch:
+        specifier: ^2.3.1
+        version: 2.3.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1643,6 +1649,10 @@ packages:
   chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+
+  ci@2.3.0:
+    resolution: {integrity: sha512-0MGXkzJKkwV3enG7RUxjJKdiAkbaZ7visCjitfpCN2BQjv02KGRMxCHLv4RPokkjJ4xR33FLMAXweS+aQ0pFSQ==}
+    hasBin: true
 
   class-variance-authority@0.7.1:
     resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
@@ -4245,6 +4255,8 @@ snapshots:
       fsevents: 2.3.3
 
   chownr@2.0.0: {}
+
+  ci@2.3.0: {}
 
   class-variance-authority@0.7.1:
     dependencies:

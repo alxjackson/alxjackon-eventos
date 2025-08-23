@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Music, Heart, PartyPopper, Users, Martini, Gift } from "lucide-react";
+import { Music, Heart, PartyPopper, Users, Martini, Gift, Mic } from "lucide-react";
 
 const services = [
   {
@@ -59,7 +59,7 @@ export const ServicesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-purple-500/20 px-4 py-2 rounded-full mb-4">
-            <Music className="w-5 h-5 text-purple-400" />
+            <Mic className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Nuestros Servicios</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

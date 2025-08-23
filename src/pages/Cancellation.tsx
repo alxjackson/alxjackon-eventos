@@ -219,19 +219,25 @@ const Cancellation = () => {
           </Card>
 
           {/* Nota Legal */}
-          <Card className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-purple-400/40">
-            <CardContent className="p-6">
-              <div className="text-center text-gray-300 text-sm">
-                <p className="mb-4">
-                  Esta política de cancelación forma parte de nuestros <Link to="/terms" className="text-purple-300 hover:text-purple-200 underline">términos y condiciones</Link>. 
+          <Card className="bg-gradient-to-r from-gray-900/95 to-purple-900/95 border-purple-400/60 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="text-center">
+                <p className="mb-6 text-white text-base font-medium leading-relaxed">
+                  Esta política de cancelación forma parte de nuestros <Link to="/terms" className="text-purple-300 hover:text-purple-200 underline font-semibold">términos y condiciones</Link>. 
                   Al contratar nuestros servicios, aceptas estas condiciones.
                 </p>
-                <p className="text-purple-200 font-medium">
-                  <strong>AlxJackson Entertainment</strong> - Desarrollado por <span className="text-purple-300">DjWacko</span>
+                <p className="text-white text-lg font-bold mb-4">
+                  <strong>AlxJackson Entertainment</strong> - Desarrollado por <span className="text-purple-300 font-semibold">DjWacko</span>
                 </p>
-                <div className="flex justify-center gap-4 mt-3 text-sm">
-                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
-                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                <div className="bg-black/40 rounded-lg p-4 backdrop-blur-sm">
+                  <div className="flex flex-col sm:flex-row justify-center gap-4 text-base font-semibold">
+                    <span className="text-green-300 flex items-center justify-center gap-2">
+                      📱 <span className="text-white">WhatsApp:</span> 56-1718-4109
+                    </span>
+                    <span className="text-blue-300 flex items-center justify-center gap-2">
+                      🐦 <span className="text-white">Twitter:</span> @DjWackoCDMX
+                    </span>
+                  </div>
                 </div>
               </div>
             </CardContent>

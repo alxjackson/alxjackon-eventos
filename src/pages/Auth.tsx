@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Eye, EyeOff, ArrowLeft, Music, Sparkles } from 'lucide-react';
+import { Eye, EyeOff, ArrowLeft, Mic, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { LoadingScreen } from '@/components/LoadingScreen';
 
@@ -87,7 +87,7 @@ const Auth = () => {
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                <Music className="w-6 h-6 text-white" />
+                <Mic className="w-6 h-6 text-white" />
               </div>
             </div>
             <div>
@@ -139,7 +139,7 @@ const Auth = () => {
           
           <div className="flex items-center justify-center gap-3">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-pulse">
-              <Music className="w-8 h-8 text-white" />
+              <Mic className="w-8 h-8 text-white" />
             </div>
             <div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">

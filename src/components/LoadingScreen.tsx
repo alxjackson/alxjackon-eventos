@@ -1,4 +1,4 @@
-import { Music, Sparkles } from "lucide-react";
+import { Mic, Sparkles } from "lucide-react";
 
 export const LoadingScreen = () => {
   return (
@@ -7,7 +7,7 @@ export const LoadingScreen = () => {
         {/* Logo animado */}
         <div className="relative mb-8">
           <div className="w-24 h-24 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-bounce">
-            <Music className="w-12 h-12 text-white animate-pulse" />
+            <Mic className="w-12 h-12 text-white animate-pulse" />
           </div>
           <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center animate-spin">
             <Sparkles className="w-4 h-4 text-white" />

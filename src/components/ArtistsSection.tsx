@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Music, Star, Users, Calendar } from "lucide-react";
+import { Mic, Star, Users, Calendar } from "lucide-react";
 
 const artists = [
   {
@@ -35,7 +35,7 @@ export const ArtistsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-purple-500/20 px-4 py-2 rounded-full mb-4">
-            <Music className="w-5 h-5 text-purple-400" />
+            <Mic className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Nuestros Artistas</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -53,7 +53,7 @@ export const ArtistsSection = () => {
               <CardContent className="p-6">
                 <div className="relative mb-6">
                   <div className="w-24 h-24 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Music className="w-12 h-12 text-white" />
+                    <Mic className="w-12 h-12 text-white" />
                   </div>
                   <div className="absolute -top-2 -right-2 bg-yellow-500 rounded-full p-1">
                     <Star className="w-4 h-4 text-white fill-current" />

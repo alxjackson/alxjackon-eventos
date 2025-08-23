@@ -1,4 +1,4 @@
-import { ArrowLeft, HelpCircle, Music, Calendar, CreditCard, Users, Clock, Star } from "lucide-react";
+import { ArrowLeft, HelpCircle, Mic, Calendar, CreditCard, Users, Clock, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,7 +10,7 @@ const FAQ = () => {
   const faqCategories = [
     {
       title: "Servicios y Artistas",
-      icon: <Music className="w-5 h-5" />,
+      icon: <Mic className="w-5 h-5" />,
       questions: [
         {
           q: "¿Qué tipos de espectáculos ofrecen?",

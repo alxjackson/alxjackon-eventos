@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { X, Download, Music, Calendar, Users, Star, Smartphone, AlertTriangle, Sparkles } from "lucide-react";
+import { X, Download, Mic, Calendar, Users, Star, Smartphone, AlertTriangle, Sparkles } from "lucide-react";
 import { Capacitor } from "@capacitor/core";
 
 export const WelcomeModal = () => {
@@ -36,7 +36,7 @@ export const WelcomeModal = () => {
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-purple-500/30 shadow-2xl">
         <DialogHeader className="text-center space-y-4">
           <div className="mx-auto w-20 h-20 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-bounce">
-            <Music className="w-10 h-10 text-white animate-pulse" />
+            <Mic className="w-10 h-10 text-white animate-pulse" />
           </div>
           <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">
             ¡Bienvenido a AlxJackson!
