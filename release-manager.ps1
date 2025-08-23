@@ -46,7 +46,8 @@ function Show-Menu {
     Write-Host "  4. ✏️  Versión Custom   (Especificar versión manualmente)"
     Write-Host "  5. 📱 Solo Build APK   (Sin cambio de versión)"
     Write-Host "  6. 🔍 Ver Status Git"
-    Write-Host "  7. ❌ Salir"
+    Write-Host "  7. ⚡ Comandos NPM Directos"
+    Write-Host "  8. ❌ Salir"
     Write-Host ""
 }
 
@@ -214,7 +215,7 @@ function Build-AndroidAPK {
         }
         
         # Verificar que se creó el APK
-        $apkPath = "app\build\outputs\apk\release\app-release.apk"
+        $apkPath = "app\build\outputs\apk\release\app-release-unsigned.apk"
         if (Test-Path $apkPath) {
             $apkSize = [math]::Round((Get-Item $apkPath).Length / 1MB, 2)
             Write-ColorOutput Green "✅ APK compilado exitosamente ($apkSize MB)"
@@ -292,6 +293,81 @@ function Show-GitStatus {
     Read-Host "Presiona Enter para continuar"
 }
 
+function Show-NPMCommands {
+    Show-Header
+    Write-ColorOutput Cyan "⚡ Comandos NPM Directos Disponibles:"
+    Write-Host ""
+    Write-ColorOutput Yellow "🚀 Comandos de Release:"
+    Write-Host "  1. npm run release:full    # Incrementa versión + compila APK + crea release"
+    Write-Host "  2. npm run version:patch   # Solo incrementa versión (2.0.10 → 2.0.11)"
+    Write-Host "  3. npm run version:minor   # Solo incrementa versión (2.0.10 → 2.1.0)"
+    Write-Host "  4. npm run version:major   # Solo incrementa versión (2.0.10 → 3.0.0)"
+    Write-Host "  5. npm run release:android # Solo compila APK (sin cambio de versión)"
+    Write-Host ""
+    Write-ColorOutput Yellow "🔧 Comandos de Desarrollo:"
+    Write-Host "  6. npm run build           # Compilar aplicación web"
+    Write-Host "  7. npm run dev             # Servidor de desarrollo"
+    Write-Host "  8. npx cap sync            # Sincronizar Capacitor"
+    Write-Host ""
+    Write-ColorOutput Yellow "📱 Flujo Completo Automático:"
+    Write-ColorOutput Green "  npm run release:full"
+    Write-Host "    ↳ Incrementa versión automáticamente"
+    Write-Host "    ↳ Compila la aplicación web"
+    Write-Host "    ↳ Sincroniza con Capacitor"
+    Write-Host "    ↳ Compila APK de Android"
+    Write-Host "    ↳ Crea commit y tag de Git"
+    Write-Host "    ↳ Sube cambios a GitHub"
+    Write-Host "    ↳ GitHub Actions crea el release automáticamente"
+    Write-Host "    ↳ Los usuarios reciben notificación en la app"
+    Write-Host ""
+    Write-ColorOutput Cyan "💡 Tip: El APK se genera como 'app-release-unsigned.apk' en:"
+    Write-Host "     android/app/build/outputs/apk/release/"
+    Write-Host ""
+    
+    $choice = Read-Host "¿Ejecutar algún comando? (1-8) o Enter para volver"
+    
+    switch ($choice) {
+        "1" { 
+            Write-ColorOutput Green "🚀 Ejecutando: npm run release:full"
+            npm run release:full
+        }
+        "2" { 
+            Write-ColorOutput Green "📝 Ejecutando: npm run version:patch"
+            npm run version:patch
+        }
+        "3" { 
+            Write-ColorOutput Green "📝 Ejecutando: npm run version:minor"
+            npm run version:minor
+        }
+        "4" { 
+            Write-ColorOutput Green "📝 Ejecutando: npm run version:major"
+            npm run version:major
+        }
+        "5" { 
+            Write-ColorOutput Green "📱 Ejecutando: npm run release:android"
+            npm run release:android
+        }
+        "6" { 
+            Write-ColorOutput Green "🔨 Ejecutando: npm run build"
+            npm run build
+        }
+        "7" { 
+            Write-ColorOutput Green "🔧 Ejecutando: npm run dev"
+            npm run dev
+        }
+        "8" { 
+            Write-ColorOutput Green "🔄 Ejecutando: npx cap sync"
+            npx cap sync
+        }
+        default { 
+            return
+        }
+    }
+    
+    Write-Host ""
+    Read-Host "Presiona Enter para continuar"
+}
+
 function Start-FullRelease($versionType, $customVersion) {
     Show-Header
     
@@ -358,7 +434,7 @@ function Start-FullRelease($versionType, $customVersion) {
     Write-Host "  4. Los usuarios recibirán notificación en la app"
     Write-Host ""
     
-    $apkPath = "android\app\build\outputs\apk\release\app-release.apk"
+    $apkPath = "android\app\build\outputs\apk\release\app-release-unsigned.apk"
     if (Test-Path $apkPath) {
         $apkSize = [math]::Round((Get-Item $apkPath).Length / 1MB, 2)
         Write-ColorOutput Yellow "📱 APK ubicado en: $apkPath ($apkSize MB)"
@@ -373,7 +449,7 @@ do {
     Show-Header
     Show-Menu
     
-    $choice = Read-Host "Selecciona una opción (1-7)"
+    $choice = Read-Host "Selecciona una opción (1-8)"
     
     switch ($choice) {
         "1" { Start-FullRelease "patch" }
@@ -397,7 +473,8 @@ do {
             Read-Host "Presiona Enter para continuar"
         }
         "6" { Show-GitStatus }
-        "7" { 
+        "7" { Show-NPMCommands }
+        "8" { 
             Write-ColorOutput Green "👋 ¡Hasta luego!"
             exit 
         }

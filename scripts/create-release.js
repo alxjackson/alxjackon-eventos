@@ -10,7 +10,7 @@ console.log(`🚀 Creando release para versión v${version}...`);
 
 try {
   // 1. Verificar que existe el APK compilado
-  const apkPath = path.join('android', 'app', 'build', 'outputs', 'apk', 'release', 'app-release.apk');
+  const apkPath = path.join('android', 'app', 'build', 'outputs', 'apk', 'release', 'app-release-unsigned.apk');
   
   if (!fs.existsSync(apkPath)) {
     console.error('❌ No se encontró el APK compilado. Ejecuta primero: npm run release:android');

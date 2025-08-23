@@ -1,0 +1,13 @@
+{
+  "version": "2.0.13",
+  "releaseDate": "2025-08-23T09:26:21.783Z",
+  "changelog": [
+    "fix: convertir create-release.js a ES6 modules y actualizar APK",
+    "fix: corregir comando Gradle para Windows en package.json",
+    "fix: use pre-installed Android SDK to avoid download timeout",
+    "fix: resolve Android SDK license acceptance in GitHub Actions workflow",
+    "Fix GitHub Actions build errors - Update Node.js to v20 and regenerate package-lock.json to resolve dependency conflicts"
+  ],
+  "downloadUrl": "https://github.com/alxjackson/alxjackon-eventos/releases/download/v2.0.13/app-release.apk",
+  "apkSize": 43.87
+}
