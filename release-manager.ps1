@@ -308,6 +308,7 @@ function Show-NPMCommands {
     Write-Host "  6. npm run build           # Compilar aplicación web"
     Write-Host "  7. npm run dev             # Servidor de desarrollo"
     Write-Host "  8. npx cap sync            # Sincronizar Capacitor"
+    Write-Host "  9. Verificar Git Status    # Ver estado actual del repositorio"
     Write-Host ""
     Write-ColorOutput Yellow "📱 Flujo Completo Automático:"
     Write-ColorOutput Green "  npm run release:full"
@@ -324,7 +325,7 @@ function Show-NPMCommands {
     Write-Host "     android/app/build/outputs/apk/release/"
     Write-Host ""
     
-    $choice = Read-Host "¿Ejecutar algún comando? (1-8) o Enter para volver"
+    $choice = Read-Host "¿Ejecutar algún comando? (1-9) o Enter para volver"
     
     switch ($choice) {
         "1" { 
@@ -358,6 +359,18 @@ function Show-NPMCommands {
         "8" { 
             Write-ColorOutput Green "🔄 Ejecutando: npx cap sync"
             npx cap sync
+        }
+        "9" { 
+            Write-ColorOutput Cyan "🔍 Verificando estado de Git..."
+            Write-Host ""
+            Write-ColorOutput Yellow "📋 Verificar que el tag se creó:"
+            git tag --list | findstr v2.0.14
+            Write-Host ""
+            Write-ColorOutput Yellow "📝 Ver el último commit:"
+            git log --oneline -1
+            Write-Host ""
+            Write-ColorOutput Yellow "📊 Estado actual del repositorio:"
+            git status
         }
         default { 
             return

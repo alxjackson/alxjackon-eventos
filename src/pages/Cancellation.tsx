@@ -50,7 +50,7 @@ const Cancellation = () => {
                 <AlertCircle className="w-8 h-8 text-yellow-400 flex-shrink-0 mt-1" />
                 <div>
                   <h2 className="text-xl font-bold text-white mb-4">Información Importante</h2>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-white leading-relaxed font-medium">
                     En AlxJackson Entertainment entendemos que pueden surgir imprevistos. 
                     Esta política está diseñada para ser justa tanto para nuestros clientes como para nuestros artistas.
                   </p>
@@ -66,7 +66,7 @@ const Cancellation = () => {
                 <div className="text-center">
                   <Clock className="w-12 h-12 text-green-300 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">30+ Días Antes</h3>
-                  <p className="text-base text-white/90 mb-4">Cancelación con 30 días o más de anticipación</p>
+                  <p className="text-base text-white mb-4 font-semibold">Cancelación con 30 días o más de anticipación</p>
                   <div className="bg-green-600/40 rounded-lg p-4 border border-green-400/30">
                     <p className="text-white font-bold text-lg">100% Reembolso</p>
                     <p className="text-green-100 mt-1">Sin penalización</p>
@@ -80,7 +80,7 @@ const Cancellation = () => {
                 <div className="text-center">
                   <Clock className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">15-29 Días Antes</h3>
-                  <p className="text-base text-white/90 mb-4">Cancelación entre 15 y 29 días</p>
+                  <p className="text-base text-white mb-4 font-semibold">Cancelación entre 15 y 29 días</p>
                   <div className="bg-yellow-600/40 rounded-lg p-4 border border-yellow-400/30">
                     <p className="text-white font-bold text-lg">75% Reembolso</p>
                     <p className="text-yellow-100 mt-1">25% gastos administrativos</p>
@@ -94,7 +94,7 @@ const Cancellation = () => {
                 <div className="text-center">
                   <Clock className="w-12 h-12 text-red-300 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Menos de 15 Días</h3>
-                  <p className="text-base text-white/90 mb-4">Cancelación con menos de 15 días</p>
+                  <p className="text-base text-white mb-4 font-semibold">Cancelación con menos de 15 días</p>
                   <div className="bg-red-600/40 rounded-lg p-4 border border-red-400/30">
                     <p className="text-white font-bold text-lg">50% Reembolso</p>
                     <p className="text-red-100 mt-1">50% gastos de preparación</p>

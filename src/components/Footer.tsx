@@ -159,11 +159,11 @@ export const Footer = () => {
 
               {/* Developer Info */}
               <div className="text-center">
-                <p className="text-purple-200/90 text-sm mb-2">
+                <p className="text-white text-sm mb-2 font-medium">
                   Plataforma exclusiva para adultos (+18)
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
-                  <span className="text-purple-300">🎵 Desarrollado con pasión y tecnología de vanguardias</span>
+                  <span className="text-white font-semibold">🎵 Desarrollado con pasión y tecnología de vanguardias</span>
                   <div className="flex items-center gap-4">
                     <a 
                       href="https://wa.me/525617184109" 
@@ -185,7 +185,7 @@ export const Footer = () => {
                     </a>
                   </div>
                 </div>
-                <p className="text-purple-200/70 text-xs mt-2">
+                <p className="text-white/90 text-xs mt-2 font-medium">
                   ⭐ Creamos experiencias digitales únicas para comunidades exclusivas ⭐
                 </p>
               </div>
