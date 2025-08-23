@@ -8,6 +8,7 @@ Write-Host "🔧 Comprehensive Capacitor Java Fix - Starting..." -ForegroundColo
 # Files to fix
 $filesToFix = @(
     "android\app\capacitor.build.gradle",
+    "android\capacitor-cordova-android-plugins\build.gradle",
     "android\gradle\wrapper\gradle-wrapper.properties",
     "node_modules\@capacitor\android\capacitor\build.gradle",
     "node_modules\@capacitor\camera\android\build.gradle",
