@@ -51,44 +51,30 @@ export async function checkDeviceSecurity(): Promise<{ isSecure: boolean; reason
   }
 }
 
-// Solicitar permisos de notificaciones push
-export async function requestNotificationPermissions(): Promise<boolean> {
-  if (!Capacitor.isNativePlatform()) {
-    // En web, usar Notification API
-    if ('Notification' in window) {
-      const permission = await Notification.requestPermission();
-      return permission === 'granted';
-    }
-    return false;
-  }
-
+// Función para solicitar permisos de notificaciones (solo Android)
+export const requestNotificationPermission = async (): Promise<boolean> => {
   try {
-    const permStatus = await PushNotifications.checkPermissions();
-    
-    if (permStatus.receive === 'prompt') {
+    if (Capacitor.isNativePlatform()) {
+      // Android nativo
       const result = await PushNotifications.requestPermissions();
       return result.receive === 'granted';
+    } else {
+      // Web/PC - No soportado
+      console.log('Notification permissions not supported on web platform');
+      return false;
     }
-    
-    return permStatus.receive === 'granted';
   } catch (error) {
     console.error('Error requesting notification permissions:', error);
     return false;
   }
 }
 
-// Solicitar permisos de geolocalización
+// Solicitar permisos de geolocalización (solo Android)
 export async function requestGeolocationPermissions(): Promise<boolean> {
   if (!Capacitor.isNativePlatform()) {
-    // En web, usar Geolocation API
-    try {
-      await new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 });
-      });
-      return true;
-    } catch (error) {
-      return false;
-    }
+    // Web/PC - No soportado
+    console.log('Geolocation permissions not supported on web platform');
+    return false;
   }
 
   try {
@@ -106,17 +92,12 @@ export async function requestGeolocationPermissions(): Promise<boolean> {
   }
 }
 
-// Solicitar permisos de cámara (para QR)
+// Solicitar permisos de cámara (solo Android)
 export async function requestCameraPermissions(): Promise<boolean> {
   if (!Capacitor.isNativePlatform()) {
-    // En web, usar MediaDevices API
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      stream.getTracks().forEach(track => track.stop()); // Detener inmediatamente
-      return true;
-    } catch (error) {
-      return false;
-    }
+    // Web/PC - No soportado
+    console.log('Camera permissions not supported on web platform');
+    return false;
   }
 
   try {
@@ -134,10 +115,11 @@ export async function requestCameraPermissions(): Promise<boolean> {
   }
 }
 
-// Solicitar permisos de contactos (placeholder - requiere plugin adicional)
+// Solicitar permisos de contactos (solo Android)
 export async function requestContactsPermissions(): Promise<boolean> {
   if (!Capacitor.isNativePlatform()) {
-    // En web no hay acceso directo a contactos por seguridad
+    // Web/PC - No soportado
+    console.log('Contacts permissions not supported on web platform');
     return false;
   }
 
@@ -165,7 +147,7 @@ export async function checkAllPermissions(): Promise<PermissionStatus> {
   }
 
   const [notifications, geolocation, camera, contacts] = await Promise.all([
-    requestNotificationPermissions(),
+    requestNotificationPermission(),
     requestGeolocationPermissions(),
     requestCameraPermissions(),
     requestContactsPermissions()

@@ -112,45 +112,24 @@ function Build-WebApp {
     Write-ColorOutput Green "🔨 Compilando aplicación web..."
     Write-ColorOutput Yellow "   ⏳ Este proceso puede tomar 1-2 minutos..."
     
-    # Ejecutar con progreso visual
-    $process = Start-Process -FilePath "npm" -ArgumentList "run", "build" -NoNewWindow -PassThru -RedirectStandardOutput "build-output.log" -RedirectStandardError "build-error.log"
-    
-    $counter = 0
-    $spinner = @('|', '/', '-', '\')
-    
-    while (!$process.HasExited) {
-        Write-Host "`r   $($spinner[$counter % 4]) Compilando..." -NoNewline -ForegroundColor Yellow
-        Start-Sleep -Milliseconds 500
-        $counter++
+    try {
+        # Usar cmd para ejecutar npm de manera más confiable
+        $buildResult = cmd /c "npm run build 2>&1"
         
-        # Timeout después de 5 minutos
-        if ($counter -gt 600) {
-            $process.Kill()
-            Write-Host ""
-            Write-ColorOutput Red "❌ Timeout: Build tomó más de 5 minutos"
+        if ($LASTEXITCODE -ne 0) {
+            Write-ColorOutput Red "❌ Error compilando aplicación web"
+            Write-ColorOutput Red "   Error details:"
+            $buildResult | Select-Object -Last 5 | ForEach-Object { Write-Host "   $_" -ForegroundColor Red }
             return $false
         }
+        
+        Write-ColorOutput Green "✅ Aplicación web compilada"
+        return $true
     }
-    
-    $process.WaitForExit()
-    Write-Host ""
-    
-    if ($process.ExitCode -ne 0) {
-        Write-ColorOutput Red "❌ Error compilando aplicación web"
-        if (Test-Path "build-error.log") {
-            Write-ColorOutput Red "   Error details:"
-            Get-Content "build-error.log" | Select-Object -Last 5 | ForEach-Object { Write-Host "   $_" -ForegroundColor Red }
-        }
+    catch {
+        Write-ColorOutput Red "❌ Error ejecutando npm build: $($_.Exception.Message)"
         return $false
     }
-    
-    Write-ColorOutput Green "✅ Aplicación web compilada"
-    
-    # Limpiar archivos de log
-    if (Test-Path "build-output.log") { Remove-Item "build-output.log" }
-    if (Test-Path "build-error.log") { Remove-Item "build-error.log" }
-    
-    return $true
 }
 
 function Sync-Capacitor {
