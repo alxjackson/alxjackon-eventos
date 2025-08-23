@@ -184,7 +184,7 @@ https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.1/app-re
 
 ## 👨‍💻 Desarrollador
 
-**Desarrollado por:** DjWacko  
+**Desarrollado por:** Ing. Juan Carlos Mendez N. "DjWacko"   
 **Contacto Developer:**
 - 📱 WhatsApp: [56-1718-4109](https://wa.me/5215617184109)
 - 🐦 Twitter: [@DjWackoCDMX](https://twitter.com/DjWackoCDMX)
