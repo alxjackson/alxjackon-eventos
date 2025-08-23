@@ -1,0 +1,129 @@
+name: Auto Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build web app
+      run: npm run build
+      
+    - name: Sync Capacitor
+      run: npx cap sync android
+      
+    - name: Build Android APK
+      run: |
+        cd android
+        chmod +x ./gradlew
+        ./gradlew assembleRelease
+        
+    - name: Get version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+      
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: AlxJackson Eventos v${{ steps.get_version.outputs.VERSION }}
+        body: |
+          🎉 Nueva versión de AlxJackson Eventos disponible!
+          
+          ## 📱 Aplicación Móvil
+          - Versión: v${{ steps.get_version.outputs.VERSION }}
+          - Plataforma: Android
+          - Tamaño: ~27MB
+          
+          ## 📋 Instrucciones de Instalación
+          1. Descarga el archivo `app-release.apk`
+          2. Desinstala la versión anterior (si existe)
+          3. Habilita "Fuentes desconocidas" en tu dispositivo
+          4. Instala la nueva versión
+          
+          ## 🔧 Mejoras en esta versión
+          - Footer rediseñado con estilo KaroVicious
+          - Mejor contraste y legibilidad
+          - Información de contacto actualizada
+          - Optimizaciones de rendimiento
+          
+          ## ⚠️ Importante
+          - Plataforma exclusiva para adultos (+18)
+          - Desinstala versiones anteriores antes de instalar
+          
+          ---
+          🎵 Desarrollado con pasión por DjWacko
+        draft: false
+        prerelease: false
+        
+    - name: Upload APK to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: android/app/build/outputs/apk/release/app-release.apk
+        asset_name: app-release.apk
+        asset_content_type: application/vnd.android.package-archive
+        
+    - name: Delete previous releases (keep only latest 3)
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const releases = await github.rest.repos.listReleases({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            per_page: 100
+          });
+          
+          // Mantener solo los últimos 3 releases
+          const releasesToDelete = releases.data.slice(3);
+          
+          for (const release of releasesToDelete) {
+            console.log(`Eliminando release: ${release.tag_name}`);
+            await github.rest.repos.deleteRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.id
+            });
+            
+            // También eliminar el tag
+            try {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `tags/${release.tag_name}`
+              });
+            } catch (error) {
+              console.log(`No se pudo eliminar tag ${release.tag_name}: ${error.message}`);
+            }
+          }

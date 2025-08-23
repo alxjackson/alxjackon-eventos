@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { WelcomeModal } from '@/components/WelcomeModal';
+import { UpdateModal } from '@/components/UpdateModal';
+import { useVersionCheck } from '@/hooks/useVersionCheck';
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ArtistsSection } from '@/components/ArtistsSection';
@@ -21,6 +23,14 @@ const Index = () => {
   const isNativeApp = Capacitor.isNativePlatform();
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const showAndroidAppButton = !isNativeApp; // Show on all web browsers, not just mobile
+  
+  // Version check hook
+  const { 
+    currentVersion, 
+    updateInfo, 
+    showModal, 
+    dismissUpdate 
+  } = useVersionCheck();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,7 +41,9 @@ const Index = () => {
   }, []);
 
   const handleDownloadAndroidApp = () => {
-    window.open('https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.0/app-release.apk', '_blank');
+    const downloadUrl = updateInfo?.downloadUrl || 
+      `https://github.com/alxjackson/alxjackon-eventos/releases/latest/download/app-release.apk`;
+    window.open(downloadUrl, '_blank');
   };
 
   if (isLoading) {
@@ -41,6 +53,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <WelcomeModal />
+      
+      {/* Update Modal */}
+      {updateInfo && (
+        <UpdateModal
+          isOpen={showModal}
+          onClose={dismissUpdate}
+          currentVersion={currentVersion}
+          newVersion={updateInfo.version}
+          changelog={updateInfo.changelog}
+          downloadUrl={updateInfo.downloadUrl}
+        />
+      )}
+      
       <Header />
       
       {/* Download Android App Banner - Only show on web browsers, not in native app */}

@@ -1,7 +1,7 @@
 {
   "name": "alxjackson-eventos",
   "private": true,
-  "version": "1.1.1",
+  "version": "2.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,12 @@
     "cap:sync": "cap sync",
     "cap:run:android": "cap run android",
     "cap:run:ios": "cap run ios",
-    "cap:build": "npm run build && cap sync"
+    "cap:build": "npm run build && cap sync",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "release:android": "npm run build && cap sync && cd android && ./gradlew assembleRelease",
+    "release:full": "npm run version:patch && npm run release:android && node scripts/create-release.js"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.2",
