@@ -1,0 +1,34 @@
+﻿2025-08-23T14:41:08.8330507Z Current runner version: '2.328.0'
+2025-08-23T14:41:08.8366470Z ##[group]Runner Image Provisioner
+2025-08-23T14:41:08.8367656Z Hosted Compute Agent
+2025-08-23T14:41:08.8368515Z Version: 20250818.377
+2025-08-23T14:41:08.8369395Z Commit: 3c593e9f75fe0b87e893bca80d6e12ba089c61fc
+2025-08-23T14:41:08.8370933Z Build Date: 2025-08-18T14:52:18Z
+2025-08-23T14:41:08.8371910Z ##[endgroup]
+2025-08-23T14:41:08.8372874Z ##[group]Operating System
+2025-08-23T14:41:08.8373798Z Ubuntu
+2025-08-23T14:41:08.8374548Z 24.04.2
+2025-08-23T14:41:08.8375430Z LTS
+2025-08-23T14:41:08.8376517Z ##[endgroup]
+2025-08-23T14:41:08.8377437Z ##[group]Runner Image
+2025-08-23T14:41:08.8378553Z Image: ubuntu-24.04
+2025-08-23T14:41:08.8379552Z Version: 20250818.1.0
+2025-08-23T14:41:08.8381267Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-23T14:41:08.8383872Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+2025-08-23T14:41:08.8385934Z ##[endgroup]
+2025-08-23T14:41:08.8388157Z ##[group]GITHUB_TOKEN Permissions
+2025-08-23T14:41:08.8390970Z Contents: read
+2025-08-23T14:41:08.8391998Z Metadata: read
+2025-08-23T14:41:08.8392887Z Packages: read
+2025-08-23T14:41:08.8393688Z ##[endgroup]
+2025-08-23T14:41:08.8397066Z Secret source: Actions
+2025-08-23T14:41:08.8398242Z Prepare workflow directory
+2025-08-23T14:41:08.8873757Z Prepare all required actions
+2025-08-23T14:41:08.8931486Z Getting action download info
+2025-08-23T14:41:09.1631334Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-08-23T14:41:09.2325765Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-08-23T14:41:09.3192081Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+2025-08-23T14:41:09.7806602Z Download action repository 'actions/create-release@v1' (SHA:0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e)
+2025-08-23T14:41:10.2345380Z Download action repository 'actions/upload-release-asset@v1' (SHA:e8f9f06c4b078e705bd2ea027f0926603fc9b4d5)
+2025-08-23T14:41:10.6092743Z Download action repository 'actions/github-script@v7' (SHA:60a0d83039c74a4aee543508d2ffcb1c3799cdea)
+2025-08-23T14:41:11.0396015Z Complete job name: build-and-release

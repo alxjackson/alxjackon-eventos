@@ -1,0 +1,130 @@
+﻿2025-08-23T14:41:47.4572140Z ##[group]Run cd android
+2025-08-23T14:41:47.4572403Z [36;1mcd android[0m
+2025-08-23T14:41:47.4572600Z [36;1mchmod +x ./gradlew[0m
+2025-08-23T14:41:47.4572824Z [36;1m./gradlew assembleRelease[0m
+2025-08-23T14:41:47.4612535Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:41:47.4612770Z env:
+2025-08-23T14:41:47.4613047Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:41:47.4613530Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:41:47.4613895Z ##[endgroup]
+2025-08-23T14:41:47.5491456Z Downloading https://services.gradle.org/distributions/gradle-8.11.1-all.zip
+2025-08-23T14:41:49.4057628Z .....................10%......................20%......................30%......................40%......................50%......................60%......................70%......................80%......................90%......................100%
+2025-08-23T14:41:52.7413168Z 
+2025-08-23T14:41:52.7414202Z Welcome to Gradle 8.11.1!
+2025-08-23T14:41:52.7415325Z 
+2025-08-23T14:41:52.7415813Z Here are the highlights of this release:
+2025-08-23T14:41:52.7417974Z  - Parallel load and store for Configuration Cache
+2025-08-23T14:41:52.7423879Z  - Java compilation errors at the end of the build output
+2025-08-23T14:41:52.7425193Z  - Consolidated report for warnings and deprecations
+2025-08-23T14:41:52.7426053Z 
+2025-08-23T14:41:52.7426870Z For more details see https://docs.gradle.org/8.11.1/release-notes.html
+2025-08-23T14:41:52.7427335Z 
+2025-08-23T14:41:52.8420173Z Starting a Gradle Daemon (subsequent builds will be faster)
+2025-08-23T14:42:23.2408419Z 
+2025-08-23T14:42:23.2469726Z > Configure project :app
+2025-08-23T14:42:23.2471115Z WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+2025-08-23T14:42:25.9406892Z 
+2025-08-23T14:42:25.9407902Z > Configure project :capacitor-cordova-android-plugins
+2025-08-23T14:42:25.9408984Z WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+2025-08-23T14:42:46.7406452Z 
+2025-08-23T14:42:46.7407077Z > Task :app:preBuild UP-TO-DATE
+2025-08-23T14:42:46.8404601Z > Task :app:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:46.8409917Z > Task :capacitor-android:preBuild UP-TO-DATE
+2025-08-23T14:42:46.8410650Z > Task :capacitor-android:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:46.8411308Z > Task :app:javaPreCompileRelease
+2025-08-23T14:42:46.8411959Z > Task :capacitor-android:writeReleaseAarMetadata
+2025-08-23T14:42:47.5405122Z > Task :capacitor-camera:preBuild UP-TO-DATE
+2025-08-23T14:42:47.5408215Z > Task :capacitor-camera:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:47.5409048Z > Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+2025-08-23T14:42:47.5410024Z > Task :capacitor-cordova-android-plugins:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:47.5410806Z > Task :capacitor-camera:writeReleaseAarMetadata
+2025-08-23T14:42:47.5413070Z > Task :capacitor-cordova-android-plugins:writeReleaseAarMetadata
+2025-08-23T14:42:47.5415154Z > Task :capacitor-device:preBuild UP-TO-DATE
+2025-08-23T14:42:47.5417168Z > Task :capacitor-device:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:47.5417848Z > Task :capacitor-geolocation:preBuild UP-TO-DATE
+2025-08-23T14:42:47.5418563Z > Task :capacitor-geolocation:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:47.5419278Z > Task :capacitor-device:writeReleaseAarMetadata
+2025-08-23T14:42:47.5419947Z > Task :capacitor-push-notifications:preBuild UP-TO-DATE
+2025-08-23T14:42:47.5420498Z > Task :capacitor-geolocation:writeReleaseAarMetadata
+2025-08-23T14:42:47.5421107Z > Task :capacitor-push-notifications:preReleaseBuild UP-TO-DATE
+2025-08-23T14:42:47.5421980Z > Task :capacitor-push-notifications:writeReleaseAarMetadata
+2025-08-23T14:42:59.4405959Z > Task :app:generateReleaseResValues
+2025-08-23T14:42:59.4423016Z > Task :app:checkReleaseAarMetadata
+2025-08-23T14:42:59.4429206Z > Task :capacitor-android:generateReleaseResValues
+2025-08-23T14:42:59.4430163Z > Task :capacitor-android:generateReleaseResources
+2025-08-23T14:42:59.5436435Z > Task :capacitor-android:packageReleaseResources
+2025-08-23T14:42:59.5438383Z > Task :capacitor-camera:generateReleaseResValues
+2025-08-23T14:42:59.5439485Z > Task :capacitor-camera:generateReleaseResources
+2025-08-23T14:42:59.5440465Z > Task :capacitor-camera:packageReleaseResources
+2025-08-23T14:42:59.5448077Z > Task :capacitor-cordova-android-plugins:generateReleaseResValues
+2025-08-23T14:42:59.5449263Z > Task :capacitor-cordova-android-plugins:generateReleaseResources
+2025-08-23T14:42:59.6417817Z > Task :capacitor-cordova-android-plugins:packageReleaseResources
+2025-08-23T14:42:59.6422060Z > Task :capacitor-device:generateReleaseResValues
+2025-08-23T14:42:59.6423254Z > Task :capacitor-device:generateReleaseResources
+2025-08-23T14:42:59.6424103Z > Task :capacitor-device:packageReleaseResources
+2025-08-23T14:42:59.6424870Z > Task :capacitor-geolocation:generateReleaseResValues
+2025-08-23T14:42:59.6425846Z > Task :capacitor-geolocation:generateReleaseResources
+2025-08-23T14:42:59.6426930Z > Task :capacitor-geolocation:packageReleaseResources
+2025-08-23T14:42:59.6450976Z > Task :capacitor-push-notifications:generateReleaseResValues
+2025-08-23T14:42:59.6451888Z > Task :capacitor-push-notifications:generateReleaseResources
+2025-08-23T14:42:59.6452828Z > Task :capacitor-push-notifications:packageReleaseResources
+2025-08-23T14:42:59.7424465Z > Task :app:mapReleaseSourceSetPaths
+2025-08-23T14:42:59.7428521Z > Task :app:generateReleaseResources
+2025-08-23T14:43:01.7403616Z > Task :app:packageReleaseResources
+2025-08-23T14:43:02.3405942Z > Task :app:createReleaseCompatibleScreenManifests
+2025-08-23T14:43:02.3406830Z > Task :app:extractDeepLinksRelease
+2025-08-23T14:43:02.3407798Z > Task :capacitor-android:extractDeepLinksRelease
+2025-08-23T14:43:02.3408429Z > Task :capacitor-camera:extractDeepLinksRelease
+2025-08-23T14:43:02.4405640Z > Task :app:parseReleaseLocalResources
+2025-08-23T14:43:02.4406682Z > Task :capacitor-cordova-android-plugins:extractDeepLinksRelease
+2025-08-23T14:43:02.5407996Z > Task :capacitor-cordova-android-plugins:processReleaseManifest
+2025-08-23T14:43:02.5409397Z > Task :capacitor-camera:processReleaseManifest
+2025-08-23T14:43:02.5410373Z > Task :capacitor-android:processReleaseManifest
+2025-08-23T14:43:02.5411302Z > Task :capacitor-device:extractDeepLinksRelease
+2025-08-23T14:43:02.5412014Z > Task :capacitor-device:processReleaseManifest
+2025-08-23T14:43:02.5412719Z > Task :capacitor-geolocation:extractDeepLinksRelease
+2025-08-23T14:43:02.5413429Z > Task :capacitor-geolocation:processReleaseManifest
+2025-08-23T14:43:02.5414177Z > Task :capacitor-push-notifications:extractDeepLinksRelease
+2025-08-23T14:43:02.5414976Z > Task :capacitor-push-notifications:processReleaseManifest
+2025-08-23T14:43:02.5415760Z > Task :capacitor-android:compileReleaseLibraryResources
+2025-08-23T14:43:02.6429924Z > Task :app:mergeReleaseResources
+2025-08-23T14:43:02.8411968Z > Task :app:processReleaseMainManifest
+2025-08-23T14:43:02.9408080Z > Task :app:processReleaseManifest
+2025-08-23T14:43:02.9410255Z > Task :capacitor-camera:compileReleaseLibraryResources
+2025-08-23T14:43:02.9412298Z > Task :capacitor-android:parseReleaseLocalResources
+2025-08-23T14:43:02.9414799Z > Task :capacitor-camera:parseReleaseLocalResources
+2025-08-23T14:43:02.9417115Z > Task :capacitor-cordova-android-plugins:compileReleaseLibraryResources
+2025-08-23T14:43:03.0415325Z > Task :app:processReleaseManifestForPackage
+2025-08-23T14:43:03.0453236Z > Task :capacitor-cordova-android-plugins:parseReleaseLocalResources
+2025-08-23T14:43:03.0468685Z > Task :capacitor-device:compileReleaseLibraryResources
+2025-08-23T14:43:03.0469700Z > Task :capacitor-camera:generateReleaseRFile
+2025-08-23T14:43:03.0484927Z > Task :capacitor-android:generateReleaseRFile
+2025-08-23T14:43:03.0485968Z > Task :capacitor-geolocation:compileReleaseLibraryResources
+2025-08-23T14:43:03.0487037Z > Task :capacitor-device:parseReleaseLocalResources
+2025-08-23T14:43:03.0487783Z > Task :capacitor-cordova-android-plugins:generateReleaseRFile
+2025-08-23T14:43:03.0488560Z > Task :capacitor-geolocation:parseReleaseLocalResources
+2025-08-23T14:43:03.1429006Z > Task :capacitor-push-notifications:compileReleaseLibraryResources
+2025-08-23T14:43:03.1432244Z > Task :capacitor-geolocation:generateReleaseRFile
+2025-08-23T14:43:03.1434645Z > Task :capacitor-device:generateReleaseRFile
+2025-08-23T14:43:03.1437501Z > Task :capacitor-android:javaPreCompileRelease
+2025-08-23T14:43:03.1439821Z > Task :capacitor-camera:javaPreCompileRelease
+2025-08-23T14:43:03.1442757Z > Task :capacitor-cordova-android-plugins:javaPreCompileRelease
+2025-08-23T14:43:03.1447512Z > Task :capacitor-push-notifications:parseReleaseLocalResources
+2025-08-23T14:43:07.5406816Z > Task :capacitor-android:compileReleaseJavaWithJavac FAILED
+2025-08-23T14:43:07.5407525Z 
+2025-08-23T14:43:07.5409080Z [Incubating] Problems report is available at: file:///home/runner/work/alxjackon-eventos/alxjackon-eventos/android/build/reports/problems/problems-report.html
+2025-08-23T14:43:07.5411387Z FAILURE: Build failed with an exception.
+2025-08-23T14:43:07.5411757Z 
+2025-08-23T14:43:07.5411936Z * What went wrong:
+2025-08-23T14:43:07.5412660Z Execution failed for task ':capacitor-android:compileReleaseJavaWithJavac'.
+2025-08-23T14:43:07.5413449Z > error: invalid source release: 21
+2025-08-23T14:43:07.5413750Z 
+2025-08-23T14:43:07.5413878Z * Try:
+2025-08-23T14:43:07.5414370Z > Run with --stacktrace option to get the stack trace.
+2025-08-23T14:43:07.5415328Z > Run with --info or --debug option to get more log output.
+2025-08-23T14:43:07.5416039Z > Run with --scan to get full insights.
+2025-08-23T14:43:07.5416955Z > Get more help at https://help.gradle.org.
+2025-08-23T14:43:07.5417447Z 
+2025-08-23T14:43:07.5457382Z BUILD FAILED in 1m 20s
+2025-08-23T14:43:07.5457860Z 70 actionable tasks: 70 executed
+2025-08-23T14:43:07.9595362Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,14 @@
+﻿2025-08-23T14:41:39.4386617Z ##[group]Run npm install -D typescript
+2025-08-23T14:41:39.4387023Z [36;1mnpm install -D typescript[0m
+2025-08-23T14:41:39.4430800Z shell: /usr/bin/bash -e {0}
+2025-08-23T14:41:39.4431036Z env:
+2025-08-23T14:41:39.4431318Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:41:39.4431790Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T14:41:39.4432129Z ##[endgroup]
+2025-08-23T14:41:40.6875848Z 
+2025-08-23T14:41:40.6876648Z up to date, audited 486 packages in 1s
+2025-08-23T14:41:40.6877068Z 
+2025-08-23T14:41:40.6877316Z 58 packages are looking for funding
+2025-08-23T14:41:40.6877737Z   run `npm fund` for details
+2025-08-23T14:41:40.6887538Z 
+2025-08-23T14:41:40.6887707Z found 0 vulnerabilities

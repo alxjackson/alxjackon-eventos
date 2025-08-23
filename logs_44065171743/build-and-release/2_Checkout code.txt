@@ -1,0 +1,85 @@
+﻿2025-08-23T14:41:11.1237446Z ##[group]Run actions/checkout@v4
+2025-08-23T14:41:11.1238725Z with:
+2025-08-23T14:41:11.1239467Z   repository: alxjackson/alxjackon-eventos
+2025-08-23T14:41:11.1240720Z   token: ***
+2025-08-23T14:41:11.1241410Z   ssh-strict: true
+2025-08-23T14:41:11.1242123Z   ssh-user: git
+2025-08-23T14:41:11.1242853Z   persist-credentials: true
+2025-08-23T14:41:11.1243662Z   clean: true
+2025-08-23T14:41:11.1244403Z   sparse-checkout-cone-mode: true
+2025-08-23T14:41:11.1245301Z   fetch-depth: 1
+2025-08-23T14:41:11.1246016Z   fetch-tags: false
+2025-08-23T14:41:11.1246894Z   show-progress: true
+2025-08-23T14:41:11.1247977Z   lfs: false
+2025-08-23T14:41:11.1248711Z   submodules: false
+2025-08-23T14:41:11.1249569Z   set-safe-directory: true
+2025-08-23T14:41:11.1250833Z ##[endgroup]
+2025-08-23T14:41:11.2327579Z Syncing repository: alxjackson/alxjackon-eventos
+2025-08-23T14:41:11.2330889Z ##[group]Getting Git version info
+2025-08-23T14:41:11.2332712Z Working directory is '/home/runner/work/alxjackon-eventos/alxjackon-eventos'
+2025-08-23T14:41:11.2335201Z [command]/usr/bin/git version
+2025-08-23T14:41:11.2342220Z git version 2.51.0
+2025-08-23T14:41:11.2370076Z ##[endgroup]
+2025-08-23T14:41:11.2386339Z Temporarily overriding HOME='/home/runner/work/_temp/cec2a6fd-6e01-4ede-a494-b86914aea881' before making global git config changes
+2025-08-23T14:41:11.2389086Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-23T14:41:11.2399074Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/alxjackon-eventos/alxjackon-eventos
+2025-08-23T14:41:11.2432131Z Deleting the contents of '/home/runner/work/alxjackon-eventos/alxjackon-eventos'
+2025-08-23T14:41:11.2435432Z ##[group]Initializing the repository
+2025-08-23T14:41:11.2439741Z [command]/usr/bin/git init /home/runner/work/alxjackon-eventos/alxjackon-eventos
+2025-08-23T14:41:11.2491359Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-23T14:41:11.2493583Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-23T14:41:11.2496675Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-23T14:41:11.2498103Z hint:
+2025-08-23T14:41:11.2499350Z hint: 	git config --global init.defaultBranch <name>
+2025-08-23T14:41:11.2500921Z hint:
+2025-08-23T14:41:11.2502039Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-23T14:41:11.2503970Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-23T14:41:11.2505782Z hint:
+2025-08-23T14:41:11.2506887Z hint: 	git branch -m <name>
+2025-08-23T14:41:11.2507978Z hint:
+2025-08-23T14:41:11.2509244Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-23T14:41:11.2511495Z Initialized empty Git repository in /home/runner/work/alxjackon-eventos/alxjackon-eventos/.git/
+2025-08-23T14:41:11.2514946Z [command]/usr/bin/git remote add origin https://github.com/alxjackson/alxjackon-eventos
+2025-08-23T14:41:11.2539758Z ##[endgroup]
+2025-08-23T14:41:11.2541216Z ##[group]Disabling automatic garbage collection
+2025-08-23T14:41:11.2544296Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-23T14:41:11.2572402Z ##[endgroup]
+2025-08-23T14:41:11.2573841Z ##[group]Setting up auth
+2025-08-23T14:41:11.2579899Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-23T14:41:11.2613917Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-23T14:41:11.2863645Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-23T14:41:11.2892337Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-23T14:41:11.3111698Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-23T14:41:11.3144949Z ##[endgroup]
+2025-08-23T14:41:11.3146857Z ##[group]Fetching the repository
+2025-08-23T14:41:11.3162078Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +00f515ed5567e26ed0ea3aa8045b925b10d806c1:refs/tags/v2.0.20
+2025-08-23T14:41:14.7506773Z From https://github.com/alxjackson/alxjackon-eventos
+2025-08-23T14:41:14.7507761Z  * [new ref]         00f515ed5567e26ed0ea3aa8045b925b10d806c1 -> v2.0.20
+2025-08-23T14:41:14.7533455Z ##[endgroup]
+2025-08-23T14:41:14.7534374Z ##[group]Determining the checkout info
+2025-08-23T14:41:14.7536025Z ##[endgroup]
+2025-08-23T14:41:14.7541614Z [command]/usr/bin/git sparse-checkout disable
+2025-08-23T14:41:14.7582468Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-23T14:41:14.7610007Z ##[group]Checking out the ref
+2025-08-23T14:41:14.7613993Z [command]/usr/bin/git checkout --progress --force refs/tags/v2.0.20
+2025-08-23T14:41:14.8720740Z Note: switching to 'refs/tags/v2.0.20'.
+2025-08-23T14:41:14.8721622Z 
+2025-08-23T14:41:14.8721955Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-08-23T14:41:14.8722651Z changes and commit them, and you can discard any commits you make in this
+2025-08-23T14:41:14.8723341Z state without impacting any branches by switching back to a branch.
+2025-08-23T14:41:14.8723794Z 
+2025-08-23T14:41:14.8724180Z If you want to create a new branch to retain commits you create, you may
+2025-08-23T14:41:14.8724856Z do so (now or later) by using -c with the switch command. Example:
+2025-08-23T14:41:14.8725255Z 
+2025-08-23T14:41:14.8725711Z   git switch -c <new-branch-name>
+2025-08-23T14:41:14.8726001Z 
+2025-08-23T14:41:14.8726510Z Or undo this operation with:
+2025-08-23T14:41:14.8726790Z 
+2025-08-23T14:41:14.8726917Z   git switch -
+2025-08-23T14:41:14.8727110Z 
+2025-08-23T14:41:14.8727426Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-08-23T14:41:14.8727846Z 
+2025-08-23T14:41:14.8728135Z HEAD is now at 00f515e Regenerate Android platform with correct Gradle configuration
+2025-08-23T14:41:14.8749159Z ##[endgroup]
+2025-08-23T14:41:14.8787722Z [command]/usr/bin/git log -1 --format=%H
+2025-08-23T14:41:14.8809818Z 00f515ed5567e26ed0ea3aa8045b925b10d806c1
