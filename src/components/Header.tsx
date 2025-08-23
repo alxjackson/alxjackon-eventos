@@ -37,15 +37,15 @@ export const Header = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#eventos" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Eventos
-          </a>
+          <Link to="/terms" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Términos
+          </Link>
           <a href="#servicios" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Servicios
           </a>
-          <a href="#precios" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Precios
-          </a>
+          <Link to="/cancellation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Cancelaciones
+          </Link>
           <a href="#contacto" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Contacto
           </a>

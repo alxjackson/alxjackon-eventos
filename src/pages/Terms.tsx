@@ -1,9 +1,10 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { ArrowLeft, FileText, Shield, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, FileText, Shield, AlertTriangle, Home, Scale } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export const Terms = () => {
   return (
@@ -12,25 +13,40 @@ export const Terms = () => {
       
       <div className="pt-20 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
+          <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-between items-start">
             <Link to="/">
-              <Button variant="ghost" className="text-white hover:text-purple-300">
+              <Button variant="ghost" className="text-white hover:text-purple-300 bg-white/10 backdrop-blur-sm border border-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver al Inicio
               </Button>
             </Link>
+            <Link to="/">
+              <Button variant="hero" size="sm" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                <Home className="w-4 h-4 mr-2" />
+                Inicio
+              </Button>
+            </Link>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="flex items-center gap-3 mb-6">
-              <FileText className="w-8 h-8 text-purple-400" />
-              <h1 className="text-4xl font-bold text-white">Términos de Uso</h1>
-            </div>
+          <Card className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl border-white/30 shadow-2xl">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg">
+                  <Scale className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">Términos de Uso</h1>
+                  <p className="text-purple-200/80 text-sm mt-1">AlxJackson Entertainment Platform</p>
+                </div>
+              </div>
 
-            <div className="prose prose-invert max-w-none text-gray-300">
-              <p className="text-lg mb-6">
-                Última actualización: 19 de agosto de 2025
-              </p>
+              <div className="bg-purple-500/20 border border-purple-400/30 rounded-xl p-4 mb-8">
+                <p className="text-purple-200 text-center font-medium">
+                  📅 Última actualización: 23 de agosto de 2025
+                </p>
+              </div>
+
+              <div className="prose prose-invert max-w-none text-gray-300">
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
@@ -62,11 +78,13 @@ export const Terms = () => {
                   <AlertTriangle className="w-6 h-6 text-red-400" />
                   3. Política de Reservaciones y Cancelaciones
                 </h2>
-                <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 mb-4">
-                  <p className="font-bold text-red-300">
-                    ⚠️ IMPORTANTE: Una vez confirmada la reservación, NO se permiten cancelaciones y NO hay devoluciones de anticipos.
-                  </p>
-                </div>
+                <Card className="bg-gradient-to-r from-red-600/30 to-orange-600/30 border-red-400/50 mb-6">
+                  <CardContent className="p-4">
+                    <p className="font-bold text-red-200 text-center">
+                      ⚠️ IMPORTANTE: Consulta nuestra <Link to="/cancellation" className="text-yellow-300 hover:text-yellow-200 underline">Política de Cancelación</Link> para conocer los términos específicos.
+                    </p>
+                  </CardContent>
+                </Card>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Las reservaciones requieren confirmación mediante código QR único</li>
                   <li>Los anticipos son requeridos para asegurar la fecha del evento</li>
@@ -138,20 +156,23 @@ export const Terms = () => {
                 </ul>
               </section>
 
-              <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-6 mt-8">
-                <p className="text-center text-purple-300 font-medium mb-4">
-                  © 2025 AlxJackson Entertainment Platform. Todos los derechos reservados.
-                </p>
-                <p className="text-center text-white/70 text-sm">
-                  🎵 Desarrollado por <span className="text-purple-400 font-semibold">DjWacko</span> - Especialista en entretenimiento digital
-                </p>
-                <div className="flex justify-center gap-4 mt-3 text-sm">
-                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
-                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
-                </div>
+                <Card className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-purple-400/40 mt-8">
+                  <CardContent className="p-6">
+                    <p className="text-center text-purple-200 font-medium mb-4">
+                      © 2025 AlxJackson Entertainment Platform. Todos los derechos reservados.
+                    </p>
+                    <p className="text-center text-white/70 text-sm">
+                      🎵 Desarrollado por <span className="text-purple-300 font-semibold">DjWacko</span> - Especialista en entretenimiento digital
+                    </p>
+                    <div className="flex justify-center gap-4 mt-3 text-sm">
+                      <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
+                      <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
 

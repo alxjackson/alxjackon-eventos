@@ -1,31 +1,47 @@
-import { ArrowLeft, Clock, AlertCircle, RefreshCw, Phone, MessageCircle } from "lucide-react";
+import { ArrowLeft, Clock, AlertCircle, RefreshCw, Phone, MessageCircle, Home, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const Cancellation = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Header */}
-      <div className="bg-black/20 backdrop-blur-sm border-b border-purple-500/20">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <div className="flex items-center gap-4">
+      <Header />
+      
+      <div className="pt-20 pb-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-between items-start">
             <Link to="/">
-              <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+              <Button variant="ghost" className="text-white hover:text-purple-300 bg-white/10 backdrop-blur-sm border border-white/20">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver al Inicio
               </Button>
             </Link>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Política de Cancelación
-            </h1>
+            <Link to="/">
+              <Button variant="hero" size="sm" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                <Home className="w-4 h-4 mr-2" />
+                Inicio
+              </Button>
+            </Link>
           </div>
-        </div>
-      </div>
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="space-y-8">
+          <Card className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl border-white/30 shadow-2xl mb-8">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl shadow-lg">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl font-bold bg-gradient-to-r from-red-300 to-orange-300 bg-clip-text text-transparent">Política de Cancelación</h1>
+                  <p className="text-purple-200/80 text-sm mt-1">AlxJackson Entertainment Platform</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="space-y-8">
           
           {/* Introducción */}
           <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-500/30">
@@ -175,18 +191,18 @@ const Cancellation = () => {
               <h2 className="text-xl font-bold text-white mb-6 text-center">¿Necesitas Cancelar un Evento?</h2>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Button 
-                  onClick={() => window.open('https://wa.me/5215512345678', '_blank')}
+                  onClick={() => window.open('https://wa.me/525617184109', '_blank')}
                   className="bg-green-600 hover:bg-green-700 text-white"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp: +52 55 1234 5678
+                  WhatsApp: +52 56 1718 4109
                 </Button>
                 <Button 
-                  onClick={() => window.open('tel:+5215512345678', '_blank')}
+                  onClick={() => window.open('tel:+525617184109', '_blank')}
                   className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Llamar: +52 55 1234 5678
+                  Llamar: +52 56 1718 4109
                 </Button>
               </div>
               <p className="text-center text-gray-300 mt-4 text-sm">
@@ -196,17 +212,28 @@ const Cancellation = () => {
           </Card>
 
           {/* Nota Legal */}
-          <div className="text-center text-gray-400 text-sm">
-            <p>
-              Esta política de cancelación forma parte de nuestros términos y condiciones. 
-              Al contratar nuestros servicios, aceptas estas condiciones.
-            </p>
-            <p className="mt-2">
-              <strong>AlxJackson Entertainment</strong> - Desarrollado por DjWacko
-            </p>
-          </div>
+          <Card className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-purple-400/40">
+            <CardContent className="p-6">
+              <div className="text-center text-gray-300 text-sm">
+                <p className="mb-4">
+                  Esta política de cancelación forma parte de nuestros <Link to="/terms" className="text-purple-300 hover:text-purple-200 underline">términos y condiciones</Link>. 
+                  Al contratar nuestros servicios, aceptas estas condiciones.
+                </p>
+                <p className="text-purple-200 font-medium">
+                  <strong>AlxJackson Entertainment</strong> - Desarrollado por <span className="text-purple-300">DjWacko</span>
+                </p>
+                <div className="flex justify-center gap-4 mt-3 text-sm">
+                  <span className="text-green-400">📱 WhatsApp: 56-1718-4109</span>
+                  <span className="text-blue-400">🐦 @DjWackoCDMX</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
