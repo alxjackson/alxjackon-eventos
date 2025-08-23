@@ -34,8 +34,8 @@ const Cancellation = () => {
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold bg-gradient-to-r from-red-300 to-orange-300 bg-clip-text text-transparent">Política de Cancelación</h1>
-                  <p className="text-purple-200/80 text-sm mt-1">AlxJackson Entertainment Platform</p>
+                  <h1 className="text-4xl font-bold text-white">Política de Cancelación</h1>
+                  <p className="text-white/90 text-sm mt-1 font-medium">AlxJackson Entertainment Platform</p>
                 </div>
               </div>
             </CardContent>

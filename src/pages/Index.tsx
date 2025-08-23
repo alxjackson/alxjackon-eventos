@@ -38,14 +38,14 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-      // Mostrar modal de permisos después del loading
-      if (!permissionsChecked) {
+      // Mostrar modal de permisos solo en web, no en APK
+      if (!permissionsChecked && !isNativeApp) {
         setShowPermissionsModal(true);
       }
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [permissionsChecked]);
+  }, [permissionsChecked, isNativeApp]);
 
   const handlePermissionsComplete = (success: boolean) => {
     setShowPermissionsModal(false);

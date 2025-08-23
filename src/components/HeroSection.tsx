@@ -20,7 +20,7 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-6 justify-center">
             <Badge variant="secondary" className="bg-gradient-accent text-foreground font-semibold px-3 py-1">
               <Star className="w-3 h-3 mr-1" />
               Entretenimiento Premium
@@ -30,7 +30,7 @@ export const HeroSection = () => {
             </Badge>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-hero bg-clip-text text-transparent">
                 AlxJackson
@@ -41,13 +41,13 @@ export const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed mx-auto sm:mx-0">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed mx-auto">
               Vive la magia de los grandes espectáculos. Freddy Mercury, Michael Jackson, Alex Vitor y más. 
               <span className="text-accent font-semibold"> Reserva tu evento único</span> y 
               obtén tu código QR de confirmación.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center sm:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300">
                 <Calendar className="w-5 h-5 mr-2" />
                 Reservar Evento

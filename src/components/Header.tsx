@@ -104,7 +104,7 @@ export const Header = () => {
           ) : (
             <>
               <Link to="/auth">
-                <Button variant="ghost" size="sm" className="bg-white/10 text-white font-semibold hover:text-purple-300 hover:bg-white/20 border-2 border-white/40 hover:border-purple-300/70 transition-all duration-200 shadow-lg backdrop-blur-sm">
+                <Button variant="outline" size="sm" className="bg-white/10 text-white font-semibold hover:text-purple-300 hover:bg-white/20 border border-white/40 hover:border-purple-300/70 transition-all duration-200 shadow-lg backdrop-blur-sm">
                   <LogIn className="w-4 h-4 mr-2" />
                   Iniciar Sesión
                 </Button>
