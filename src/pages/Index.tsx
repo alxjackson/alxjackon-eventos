@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { WelcomeModal } from '@/components/WelcomeModal';
 import { UpdateModal } from '@/components/UpdateModal';
+import { PermissionsModal } from '@/components/PermissionsModal';
 import { useVersionCheck } from '@/hooks/useVersionCheck';
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
@@ -20,6 +21,8 @@ import { Capacitor } from '@capacitor/core';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showPermissionsModal, setShowPermissionsModal] = useState(false);
+  const [permissionsChecked, setPermissionsChecked] = useState(false);
   const isNativeApp = Capacitor.isNativePlatform();
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const showAndroidAppButton = !isNativeApp; // Show on all web browsers, not just mobile
@@ -35,10 +38,22 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
+      // Mostrar modal de permisos después del loading
+      if (!permissionsChecked) {
+        setShowPermissionsModal(true);
+      }
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [permissionsChecked]);
+
+  const handlePermissionsComplete = (success: boolean) => {
+    setShowPermissionsModal(false);
+    setPermissionsChecked(true);
+    if (!success) {
+      console.log('Permisos no concedidos, continuando con funcionalidad limitada');
+    }
+  };
 
   const handleDownloadAndroidApp = () => {
     const downloadUrl = updateInfo?.downloadUrl || 
@@ -55,16 +70,20 @@ const Index = () => {
       <WelcomeModal />
       
       {/* Update Modal */}
-      {updateInfo && (
+      {showModal && updateInfo && (
         <UpdateModal
           isOpen={showModal}
           onClose={dismissUpdate}
+          updateInfo={updateInfo}
           currentVersion={currentVersion}
-          newVersion={updateInfo.version}
-          changelog={updateInfo.changelog}
-          downloadUrl={updateInfo.downloadUrl}
         />
       )}
+      
+      {/* Permissions Modal */}
+      <PermissionsModal
+        isOpen={showPermissionsModal}
+        onComplete={handlePermissionsComplete}
+      />
       
       <Header />
       
