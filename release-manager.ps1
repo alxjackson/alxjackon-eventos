@@ -109,12 +109,46 @@ function Get-ChangelogInput {
 
 function Build-WebApp {
     Write-ColorOutput Green "🔨 Compilando aplicación web..."
-    npm run build
-    if ($LASTEXITCODE -ne 0) {
+    Write-ColorOutput Yellow "   ⏳ Este proceso puede tomar 1-2 minutos..."
+    
+    # Ejecutar con progreso visual
+    $process = Start-Process -FilePath "npm" -ArgumentList "run", "build" -NoNewWindow -PassThru -RedirectStandardOutput "build-output.log" -RedirectStandardError "build-error.log"
+    
+    $counter = 0
+    $spinner = @('|', '/', '-', '\')
+    
+    while (!$process.HasExited) {
+        Write-Host "`r   $($spinner[$counter % 4]) Compilando..." -NoNewline -ForegroundColor Yellow
+        Start-Sleep -Milliseconds 500
+        $counter++
+        
+        # Timeout después de 5 minutos
+        if ($counter -gt 600) {
+            $process.Kill()
+            Write-Host ""
+            Write-ColorOutput Red "❌ Timeout: Build tomó más de 5 minutos"
+            return $false
+        }
+    }
+    
+    $process.WaitForExit()
+    Write-Host ""
+    
+    if ($process.ExitCode -ne 0) {
         Write-ColorOutput Red "❌ Error compilando aplicación web"
+        if (Test-Path "build-error.log") {
+            Write-ColorOutput Red "   Error details:"
+            Get-Content "build-error.log" | Select-Object -Last 5 | ForEach-Object { Write-Host "   $_" -ForegroundColor Red }
+        }
         return $false
     }
+    
     Write-ColorOutput Green "✅ Aplicación web compilada"
+    
+    # Limpiar archivos de log
+    if (Test-Path "build-output.log") { Remove-Item "build-output.log" }
+    if (Test-Path "build-error.log") { Remove-Item "build-error.log" }
+    
     return $true
 }
 
@@ -131,6 +165,7 @@ function Sync-Capacitor {
 
 function Build-AndroidAPK {
     Write-ColorOutput Green "📱 Compilando APK de Android..."
+    Write-ColorOutput Yellow "   ⏳ Este proceso puede tomar 3-5 minutos..."
     
     # Verificar que existe el directorio android
     if (-not (Test-Path "android")) {
@@ -141,15 +176,40 @@ function Build-AndroidAPK {
     # Cambiar al directorio android y compilar
     Push-Location "android"
     try {
-        if (Test-Path "gradlew.bat") {
-            .\gradlew.bat assembleRelease
-        } else {
+        if (-not (Test-Path "gradlew.bat")) {
             Write-ColorOutput Red "❌ gradlew.bat no encontrado"
             return $false
         }
         
-        if ($LASTEXITCODE -ne 0) {
+        # Ejecutar con progreso visual
+        $process = Start-Process -FilePath ".\gradlew.bat" -ArgumentList "assembleRelease" -NoNewWindow -PassThru -RedirectStandardOutput "..\android-build.log" -RedirectStandardError "..\android-error.log"
+        
+        $counter = 0
+        $spinner = @('⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏')
+        
+        while (!$process.HasExited) {
+            Write-Host "`r   $($spinner[$counter % 10]) Compilando APK..." -NoNewline -ForegroundColor Cyan
+            Start-Sleep -Milliseconds 300
+            $counter++
+            
+            # Timeout después de 10 minutos
+            if ($counter -gt 2000) {
+                $process.Kill()
+                Write-Host ""
+                Write-ColorOutput Red "❌ Timeout: Build de Android tomó más de 10 minutos"
+                return $false
+            }
+        }
+        
+        $process.WaitForExit()
+        Write-Host ""
+        
+        if ($process.ExitCode -ne 0) {
             Write-ColorOutput Red "❌ Error compilando APK"
+            if (Test-Path "..\android-error.log") {
+                Write-ColorOutput Red "   Error details:"
+                Get-Content "..\android-error.log" | Select-Object -Last 3 | ForEach-Object { Write-Host "   $_" -ForegroundColor Red }
+            }
             return $false
         }
         
@@ -166,6 +226,9 @@ function Build-AndroidAPK {
     }
     finally {
         Pop-Location
+        # Limpiar archivos de log
+        if (Test-Path "android-build.log") { Remove-Item "android-build.log" }
+        if (Test-Path "android-error.log") { Remove-Item "android-error.log" }
     }
 }
 

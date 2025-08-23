@@ -95,7 +95,7 @@ export const Footer = () => {
                     className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    WhatsApp Karo
+                    WhatsApp AlxJackson
                   </a>
                 </div>
               </div>
@@ -133,18 +133,9 @@ export const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-green-400 hover:text-green-300 transition-colors"
-                title="WhatsApp"
+                title="WhatsApp AlxJackson"
               >
-                📱 @69 toluca
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-                title="WhatsApp Karo"
-              >
-                📱 WhatsApp Karo
+                📱 WhatsApp AlxJackson
               </a>
               <span className="text-purple-300">🤝 Conéctate con nosotros</span>
             </div>
@@ -161,7 +152,7 @@ export const Footer = () => {
                   </div>
                   <div>
                     <p className="text-purple-100 font-semibold">DjWacko</p>
-                    <p className="text-purple-200/80 text-xs">© 2024 karoVicious. Todos los derechos reservados.</p>
+                    <p className="text-purple-200/80 text-xs">© 2024 AlxJackson. Todos los derechos reservados.</p>
                   </div>
                 </div>
               </div>
