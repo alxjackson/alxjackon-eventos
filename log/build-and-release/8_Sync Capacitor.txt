@@ -1,0 +1,10 @@
+﻿2025-08-23T13:52:06.5714356Z ##[group]Run npx cap sync android
+2025-08-23T13:52:06.5714665Z [36;1mnpx cap sync android[0m
+2025-08-23T13:52:06.5754722Z shell: /usr/bin/bash -e {0}
+2025-08-23T13:52:06.5754952Z env:
+2025-08-23T13:52:06.5755248Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T13:52:06.5755714Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-23T13:52:06.5756051Z ##[endgroup]
+2025-08-23T13:52:07.0081338Z [error] Could not find installation of TypeScript.
+2025-08-23T13:52:07.0082481Z         To use capacitor.config.ts files, you must install TypeScript in your project, e.g. w/ npm install -D typescript
+2025-08-23T13:52:07.0215026Z ##[error]Process completed with exit code 1.
