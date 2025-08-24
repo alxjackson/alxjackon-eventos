@@ -19,21 +19,34 @@ jobs:
         node-version: '20'
         cache: 'npm'
         
-    - name: Setup Java
+    - name: Setup Java 21
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '21'
         
-    - name: Set JAVA_HOME
+    - name: Set JAVA_HOME environment variable
       run: |
         echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
-        echo "PATH=$JAVA_HOME/bin:$PATH" >> $GITHUB_ENV
+        echo "$JAVA_HOME/bin" >> $GITHUB_PATH
         
     - name: Setup Android SDK
       run: |
         yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
         $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+      
+    - name: Ensure Java 21 compatibility in gradle files
+      run: |
+        echo "Appending Java 21 settings to gradle.properties..."
+        echo "" >> android/gradle.properties
+        echo "# Force Java 21 compatibility for Capacitor 7" >> android/gradle.properties
+        echo "java.sourceCompatibility=21" >> android/gradle.properties
+        echo "java.targetCompatibility=21" >> android/gradle.properties
+        
+        echo "Verifying Java 21 configuration..."
+        cat android/gradle.properties | tail -5
+        echo "=== gradle.properties content ==="
+        cat android/gradle.properties
       
     - name: Install dependencies
       run: npm install
@@ -50,31 +63,13 @@ jobs:
     - name: Sync Capacitor
       run: npx cap sync android
       
-    - name: Force Java 17 in generated files
-      run: |
-        # Force Java 17 in all auto-generated gradle files
-        find android -name "*.gradle" -type f -exec sed -i 's/JavaVersion\.VERSION_21/JavaVersion.VERSION_17/g' {} \;
-        find android -name "*.gradle" -type f -exec sed -i 's/VERSION_21/VERSION_17/g' {} \;
-        
-        # Add Java 17 enforcement to gradle.properties
-        echo "" >> android/gradle.properties
-        echo "# Force Java 17 for CI" >> android/gradle.properties
-        echo "java.sourceCompatibility=17" >> android/gradle.properties
-        echo "java.targetCompatibility=17" >> android/gradle.properties
-        
-        # Verify changes
-        echo "=== Checking for Java 21 references ==="
-        grep -r "21" android/ --include="*.gradle" || echo "No Java 21 references found"
-        echo "=== gradle.properties content ==="
-        cat android/gradle.properties
-      
     - name: Build Android APK
       run: |
         cd android
         chmod +x ./gradlew
         export JAVA_HOME=$JAVA_HOME
-        export ORG_GRADLE_PROJECT_java_sourceCompatibility=17
-        export ORG_GRADLE_PROJECT_java_targetCompatibility=17
+        export ORG_GRADLE_PROJECT_java_sourceCompatibility=21
+        export ORG_GRADLE_PROJECT_java_targetCompatibility=21
         ./gradlew assembleRelease --info -Dorg.gradle.java.home=$JAVA_HOME
         
     - name: Get version from tag
