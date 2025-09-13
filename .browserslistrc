@@ -1,0 +1,26 @@
+# Browsers that we support
+
+# Modern browsers (last 2 versions)
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+
+# Mobile browsers
+last 2 ChromeAndroid versions
+last 2 FirefoxAndroid versions
+last 2 iOS versions
+
+# Minimum versions for better compatibility
+Chrome >= 80
+Firefox >= 78
+Safari >= 13
+Edge >= 80
+
+# Android WebView
+Android >= 7.0
+
+# Dead browsers (avoid)
+not dead
+not IE 11
+not op_mini all
