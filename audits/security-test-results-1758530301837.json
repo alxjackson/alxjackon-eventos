@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "project": "AlxJackson Eventos",
+    "version": "2.0.19",
+    "startTime": "2025-09-22T08:38:21.837Z",
+    "endTime": "2025-09-22T08:38:24.014Z",
+    "duration": "2177ms",
+    "totalTests": 4
+  },
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "warnings": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "results": [
+    {
+      "testId": "TEST-001",
+      "testName": "Security Headers Verification",
+      "status": "FAIL",
+      "details": {
+        "missing": [
+          "Content-Security-Policy",
+          "Strict-Transport-Security",
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "Referrer-Policy"
+        ],
+        "recommendation": "Implementar security headers en servidor/CDN"
+      },
+      "risk": "High",
+      "timestamp": "2025-09-22T08:38:21.844Z"
+    },
+    {
+      "testId": "TEST-002",
+      "testName": "Exposed Variables Analysis",
+      "status": "FAIL",
+      "details": {
+        "exposedData": [
+          {
+            "file": "C:\\Users\\conej\\Documents\\alx-show-flow-main\\dist\\assets\\index-DZN9FkX3.js",
+            "pattern": "password"
+          }
+        ],
+        "recommendation": "Mover datos sensibles al backend"
+      },
+      "risk": "Medium",
+      "timestamp": "2025-09-22T08:38:21.859Z"
+    },
+    {
+      "testId": "TEST-007",
+      "testName": "Dependency Vulnerabilities",
+      "status": "PASS",
+      "details": {
+        "message": "No se encontraron vulnerabilidades en dependencias",
+        "totalDependencies": 637
+      },
+      "risk": "Low",
+      "timestamp": "2025-09-22T08:38:24.013Z"
+    },
+    {
+      "testId": "TEST-008",
+      "testName": "Android Security Analysis",
+      "status": "WARN",
+      "details": {
+        "issues": [
+          "allowBackup habilitado",
+          "Network Security Config no configurado"
+        ],
+        "recommendations": [
+          "Considerar deshabilitar allowBackup para datos sensibles",
+          "Implementar Network Security Config para HTTPS"
+        ],
+        "securityChecks": {
+          "allowBackup": true,
+          "debuggable": false,
+          "exportedActivities": true,
+          "internetPermission": true,
+          "networkSecurityConfig": false
+        }
+      },
+      "risk": "Medium",
+      "timestamp": "2025-09-22T08:38:24.014Z"
+    }
+  ]
+}

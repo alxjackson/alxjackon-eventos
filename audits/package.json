@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "name": "security-audit-suite",
+  "version": "1.0.0",
+  "description": "Security testing suite for AlxJackson Eventos"
+}
