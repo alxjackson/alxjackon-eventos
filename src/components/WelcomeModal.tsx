@@ -28,7 +28,7 @@ export const WelcomeModal = () => {
   };
 
   const handleDownloadAndroidApp = () => {
-    window.open('https://github.com/alxjackson/alxjackon-eventos/releases/latest/download/app-release.apk', '_blank');
+    window.open('https://github.com/alxjackson/alxjackon-eventos/releases/download/v2.0.19/app-release.apk', '_blank');
   };
 
   return (
