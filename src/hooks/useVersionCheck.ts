@@ -8,7 +8,7 @@ interface VersionInfo {
 }
 
 export const useVersionCheck = () => {
-  const [currentVersion] = useState('2.0.17'); // Versión actual de la app
+  const [currentVersion] = useState('2.0.19'); // Versión actual de la app
   const [hasUpdate, setHasUpdate] = useState(false);
   const [updateInfo, setUpdateInfo] = useState<VersionInfo | null>(null);
   const [showModal, setShowModal] = useState(false);

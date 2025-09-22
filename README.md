@@ -85,7 +85,7 @@ Plataforma de entretenimiento premium para eventos únicos con artistas de renom
 ### Backend & Base de Datos
 - **Supabase** - Backend as a Service completo
 - **PostgreSQL** - Base de datos relacional
-- **Row Level Security (RLS)** - Seguridad avanzada
+- **Row Level Security (RLS)** - Seguridad avanzada|
 - **Triggers & Functions** - Lógica de negocio
 
 ### Móvil & Deployment

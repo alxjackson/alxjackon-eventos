@@ -12,6 +12,7 @@
 	],
 	"settings": {
 		"powershell.cwd": "alx-show-flow-main",
-		"java.configuration.updateBuildConfiguration": "automatic"
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"gitConfigUser.selectedProfile": "alex eventos"
 	}
 }
