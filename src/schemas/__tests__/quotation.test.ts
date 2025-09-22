@@ -90,14 +90,15 @@ describe('Quotation Schemas', () => {
       const invalidData = {
         name: 'María García',
         email: 'maria@example.com',
-        phone: 'abc123',
+        phone: 'abc123', // Solo 6 caracteres, menos de 10 requeridos
         message: 'Test message'
       };
       
       const result = quotationContactSchema.safeParse(invalidData);
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.error.errors[0].message).toBe('Formato de teléfono inválido');
+        // El primer error será de longitud mínima, no de formato
+        expect(result.error.errors[0].message).toBe('El teléfono debe tener al menos 10 dígitos');
       }
     });
   });

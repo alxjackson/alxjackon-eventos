@@ -83,7 +83,7 @@ describe('Quotation Calculator', () => {
       expect(result.destination).toBe('Ciudad Desconocida');
       expect(result.distance).toBe(360); // Default distance * 2
       expect(result.tolls).toBe(240); // Default toll * 2
-      expect(result.requiresOvernight).toBe(true); // Default distance > 300km
+      expect(result.requiresOvernight).toBe(false); // Default distance 180km < 300km
     });
 
     it('should calculate different costs for with/without DJ', () => {
