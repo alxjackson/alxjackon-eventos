@@ -192,4 +192,6 @@ https://github.com/alxjackson/alxjackon-eventos/releases/download/v.1.1.1/app-re
 ## 📄 Licencia
 
 Proyecto privado - AlxJackson Entertainment Platform © 2025  
-**Desarrollado por DjWacko** - Todos los derechos reservados.
+
+© 2024-2025 Ingenierio en Sistemas Comutacionales y desarrollo de software .. Juan Carlos Mendez N.(DjWacko). Todos los derechos reservados
+

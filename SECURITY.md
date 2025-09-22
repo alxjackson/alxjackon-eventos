@@ -38,5 +38,33 @@ Si encuentras una vulnerabilidad de seguridad en AlxJackson Eventos, por favor r
 - Te daremos crédito por el descubrimiento (si lo deseas)
 - Trabajaremos contigo para entender y resolver el problema
 
+## Medidas de Seguridad Implementadas
+
+### Protección de Datos Sensibles
+- **Variables de Entorno**: Todas las direcciones y datos sensibles se almacenan en variables de entorno
+- **Configuración Segura**: Archivos `.env` excluidos del control de versiones
+- **Datos Genéricos**: Fallbacks seguros para información pública
+
+### Seguridad de la Aplicación
+- **Row Level Security (RLS)**: Implementado en Supabase para control de acceso
+- **Detección de Root**: Plugin nativo para detectar dispositivos comprometidos
+- **Validación de Permisos**: Sistema robusto de roles y permisos
+- **Autenticación Segura**: Tokens JWT manejados por Supabase
+
+### Configuración de Variables de Entorno
+Para proteger datos sensibles como direcciones, configura las siguientes variables en tu archivo `.env`:
+
+```bash
+# Direcciones para sistema de cotizaciones
+VITE_ORIGIN_WITH_DJ=Tu dirección completa con DJ
+VITE_ORIGIN_WITHOUT_DJ=Tu dirección completa sin DJ
+```
+
+### Buenas Prácticas
+- Nunca commits archivos `.env` al repositorio
+- Usa datos genéricos en código público
+- Revisa regularmente las dependencias por vulnerabilidades
+- Mantén actualizadas las versiones de seguridad
+
 ---
 **Nota**: Esta aplicación está destinada exclusivamente para adultos (+18) y maneja información sensible. La seguridad y privacidad de nuestros usuarios es nuestra máxima prioridad.

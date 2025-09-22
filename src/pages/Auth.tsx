@@ -79,8 +79,8 @@ const Auth = () => {
           <CardHeader className="space-y-4">
             <div className="flex items-center gap-3">
               <Button
-                variant="ghost"
-                size="sm"
+                variant={"ghost" as const}
+                size={"sm" as const}
                 onClick={() => setResetMode(false)}
                 className="p-2 hover:bg-white/10 text-white"
               >
@@ -199,8 +199,8 @@ const Auth = () => {
                       />
                       <Button
                         type="button"
-                        variant="ghost"
-                        size="sm"
+                        variant={"ghost" as const}
+                        size={"sm" as const}
                         className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-white/10 text-gray-300 hover:text-white"
                         onClick={() => setShowPassword(!showPassword)}
                       >
@@ -215,7 +215,7 @@ const Auth = () => {
                   <div className="flex items-center justify-end">
                     <Button
                       type="button"
-                      variant="link"
+                      variant={"link" as const}
                       className="px-0 text-purple-300 hover:text-purple-200 text-sm"
                       onClick={() => setResetMode(true)}
                     >
@@ -293,8 +293,8 @@ const Auth = () => {
                       />
                       <Button
                         type="button"
-                        variant="ghost"
-                        size="sm"
+                        variant={"ghost" as const}
+                        size={"sm" as const}
                         className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-white/10 text-gray-300 hover:text-white"
                         onClick={() => setShowPassword(!showPassword)}
                       >

@@ -35,8 +35,8 @@ const VEHICLE_DATA = {
 };
 
 const ORIGINS = {
-  withDJ: "Fresnos 10, La Casilda, Gustavo A. Madero, CDMX",
-  withoutDJ: "Toluca de Lerdo, Edo. Méx."
+  withDJ: import.meta.env.VITE_ORIGIN_WITH_DJ || "Ciudad de México, CDMX",
+  withoutDJ: import.meta.env.VITE_ORIGIN_WITHOUT_DJ || "Toluca de Lerdo, Estado de México"
 };
 
 // Estimaciones de peajes comunes (ida) - Actualizadas 2024

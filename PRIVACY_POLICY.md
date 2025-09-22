@@ -89,4 +89,4 @@ Procesamos tus datos basándose en:
 - **Obligación legal**: Cuando sea requerido por ley
 
 ---
-**© 2024-2025 AlxJackson (DjWacko). Todos los derechos reservados.**
+**© 2024-2025 Ingenierio en Sistemas Comutacionales y desarrollo de software .. Juan Carlos Mendez N.(DjWacko). Todos los derechos reservados.**

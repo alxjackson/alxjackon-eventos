@@ -65,4 +65,4 @@ Para preguntas sobre estos términos:
 - **Dirección**: Ciudad Colón #25, Moderna de la Cruz, 50180 Toluca de Lerdo, México
 
 ---
-**© 2024-2025 AlxJackson (DjWacko). Todos los derechos reservados.**
+**© 2024-2025 AlxJackson & Ing. Juan Carlos Mendez Nataren (DjWacko). Todos los derechos reservados.**
