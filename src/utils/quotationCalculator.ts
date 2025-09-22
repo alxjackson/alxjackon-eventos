@@ -29,9 +29,9 @@ export interface QuotationResult {
 
 // Datos base del sistema
 const VEHICLE_DATA = {
-  model: "Nissan Versa Sense 2028",
+  model: "Nissan Versa Sense 2024",
   fuelEfficiency: 19, // km/L
-  gasPrice: 23.60 // MXN por litro
+  gasPrice: 24.50 // MXN por litro (actualizado 2024)
 };
 
 const ORIGINS = {
@@ -39,19 +39,23 @@ const ORIGINS = {
   withoutDJ: "Toluca de Lerdo, Edo. Méx."
 };
 
-// Estimaciones de peajes comunes (ida)
+// Estimaciones de peajes comunes (ida) - Actualizadas 2024
 const TOLL_ESTIMATES: Record<string, number> = {
-  "toluca": 55,
-  "puebla": 180,
-  "cuernavaca": 85,
-  "pachuca": 120,
-  "queretaro": 220,
-  "guadalajara": 450,
-  "monterrey": 680,
-  "default": 100 // estimación genérica
+  "toluca": 65,
+  "puebla": 195,
+  "cuernavaca": 95,
+  "pachuca": 135,
+  "queretaro": 240,
+  "guadalajara": 485,
+  "monterrey": 720,
+  "leon": 280,
+  "morelia": 220,
+  "acapulco": 320,
+  "veracruz": 380,
+  "default": 120 // estimación genérica actualizada
 };
 
-// Estimaciones de distancia (ida) desde CDMX/Toluca
+// Estimaciones de distancia (ida) desde CDMX/Toluca - Actualizadas 2024
 const DISTANCE_ESTIMATES: Record<string, { fromCDMX: number; fromToluca: number }> = {
   "toluca": { fromCDMX: 65, fromToluca: 0 },
   "puebla": { fromCDMX: 130, fromToluca: 180 },
@@ -60,7 +64,13 @@ const DISTANCE_ESTIMATES: Record<string, { fromCDMX: number; fromToluca: number 
   "queretaro": { fromCDMX: 220, fromToluca: 160 },
   "guadalajara": { fromCDMX: 550, fromToluca: 490 },
   "monterrey": { fromCDMX: 920, fromToluca: 860 },
-  "default": { fromCDMX: 150, fromToluca: 150 }
+  "leon": { fromCDMX: 380, fromToluca: 320 },
+  "morelia": { fromCDMX: 300, fromToluca: 240 },
+  "acapulco": { fromCDMX: 400, fromToluca: 450 },
+  "veracruz": { fromCDMX: 350, fromToluca: 400 },
+  "cancun": { fromCDMX: 1550, fromToluca: 1600 },
+  "merida": { fromCDMX: 1200, fromToluca: 1250 },
+  "default": { fromCDMX: 180, fromToluca: 180 }
 };
 
 function estimateDistance(destination: string, includesDJ: boolean): number {
@@ -98,19 +108,21 @@ function requiresOvernight(distance: number, eventDuration: number): boolean {
 function calculateAccommodation(destination: string): number {
   const destKey = destination.toLowerCase();
   
-  // Estimaciones de hospedaje por zona
-  if (destKey.includes("guadalajara") || destKey.includes("monterrey")) {
-    return 1200; // Hotel estándar en ciudades grandes
-  } else if (destKey.includes("puebla") || destKey.includes("queretaro")) {
-    return 800; // Hotel estándar en ciudades medianas
+  // Estimaciones de hospedaje por zona - Actualizadas 2024
+  if (destKey.includes("guadalajara") || destKey.includes("monterrey") || destKey.includes("cancun") || destKey.includes("merida")) {
+    return 1500; // Hotel estándar en ciudades grandes/turísticas
+  } else if (destKey.includes("puebla") || destKey.includes("queretaro") || destKey.includes("leon") || destKey.includes("morelia")) {
+    return 1000; // Hotel estándar en ciudades medianas
+  } else if (destKey.includes("acapulco") || destKey.includes("veracruz")) {
+    return 1200; // Destinos turísticos costeros
   } else {
-    return 600; // Hotel básico en ciudades pequeñas
+    return 800; // Hotel básico en ciudades pequeñas
   }
 }
 
 function calculateMeals(overnight: boolean): number {
   if (overnight) {
-    return 450; // Desayuno, comida y cena
+    return 550; // Desayuno, comida y cena - Actualizado 2024
   }
   return 0;
 }

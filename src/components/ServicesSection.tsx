@@ -74,34 +74,34 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105">
-                <CardHeader className="space-y-4">
+              <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105 w-full">
+                <CardHeader className="space-y-4 p-4 sm:p-6">
                   <div className="flex items-center justify-between">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+                    <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 text-xs sm:text-sm">
                       {service.badge}
                     </Badge>
                   </div>
                   <div>
-                    <CardTitle className="text-2xl text-white group-hover:text-purple-300 transition-colors">
+                    <CardTitle className="text-lg sm:text-xl lg:text-2xl text-white group-hover:text-purple-300 transition-colors leading-tight">
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="mt-3 text-gray-300 leading-relaxed">
+                    <CardDescription className="mt-2 sm:mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
+                <CardContent className="p-4 sm:p-6 pt-0">
+                  <ul className="space-y-2 sm:space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-gray-300">
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                      <li key={idx} className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-gray-300">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex-shrink-0"></div>
                         <span className="font-medium">{feature}</span>
                       </li>
                     ))}
